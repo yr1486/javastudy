@@ -61,6 +61,7 @@ public class Ex04_switch {
 	public static void ex03() {
 		// 수, 우, 미, 양, 가, 잘못된 점수
 	
+		int score = 85;
 		
 		switch( score / 10) {
 		case 10:
@@ -115,7 +116,7 @@ public class Ex04_switch {
 		
 	}
 	public static void main(String[] args) { // ctrl + 스페이스 하면 나옴
-		ex04();
+		ex03();
 	
 
 	}
