@@ -8,12 +8,11 @@ public class Ex03_else_if {
 		// 60 이상 : 중
 		// 나머지 : 하
 		
-		int score = 60;
+		int score = 80;
 		
 		if(score >= 80) {
 			System.out.println("상");
 		}
-		
 		else if(score >= 60) {
 				System.out.println("중");    // if안에 또 if를 집어 넣을때 else if를 씁니다.
 		}
@@ -52,13 +51,13 @@ public class Ex03_else_if {
 		
 	}
 	
-	public static void ex03() { //연습 : 겨울 출력하기
+	public static void ex03() { // 연습문제 : 겨울 출력하기
 		
 		// 봄345 여름678 가을91011 겨울1212 출력하기
 		// 겨울 12 1 2 를 생각하기. ==> 나눌 경우 나머지로 활용
 		
 		
-		int month = 12;
+		int month = 0;
 		
 		int mod = month % 12;
 		
@@ -99,9 +98,12 @@ public class Ex03_else_if {
 			weekName = "월";
 		}	
 		else if(mod == 3) {
-			weekName = "수";
+			weekName = "화";
 		}	
 		else if(mod == 4) {
+			weekName = "수";
+		}
+		else if(mod == 5) {
 			weekName = "목";
 		}
 		else {

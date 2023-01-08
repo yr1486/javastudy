@@ -46,7 +46,7 @@ public class MainClass {
 		int second = 90;
 				
 		int min = second / 60; // 1분
-		int sec = second % 60; //30
+		int sec = second % 60; //30초
 				
 		System.out.println(min);
 		System.out.println(sec);
@@ -63,7 +63,8 @@ public class MainClass {
 		// 변수 a의 값을 1 증가(감소) 시킨 뒤에 사용하시오.
 		
 		int a = 10;
-		System.out.println(++a);
+		System.out.println(--a);
+		
 		
 		//후위 연산(post operator)
 		//b++ 또는 b--
@@ -98,7 +99,7 @@ public class MainClass {
 		int x = 10;
 		int y = 20;
 		
-		//교환 (1. 백업 후 2. 덮어쓰기 3. )
+		//x와 y 값 교환 (1. 변수에 백업 후 2. 변수에 대입 3. )
 		
 		int temp;
 		temp = x;
@@ -117,7 +118,7 @@ public class MainClass {
 		account += 5000;   // 같은식이고 줄여서 씀. account = account + 5000;
 		// account ++ // 같은식이고 왼쪽을 쓰도록 하기 account += 1;
 		
-		account -= 50000; //같은 식 account = account - 50000;
+		account -= 5000; //같은 식 account = account - 50000;
 		System.out.println(account);
 		
 		
@@ -128,7 +129,7 @@ public class MainClass {
 		
 		long account = 123456;
 		
-//		5% 이자 받으면 얼마?
+		// 5% 이자 받으면 얼마?
 		double result;
 		result = account * 1.05;
 		// result = account + account * 0.05;

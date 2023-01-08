@@ -5,6 +5,7 @@ public class Ex02_else {
 	public static void main(String[] args) {
 
 //		tap 키 잘 활용하기 shift + tap 
+		
 		int score = 80;
 		
 		if(score >= 60) {

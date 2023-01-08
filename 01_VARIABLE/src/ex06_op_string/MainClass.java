@@ -25,6 +25,7 @@ public class MainClass {
 		
 		int a = 100;
 		String str = a + "";
+		
 		// a를 문자열로 바꿨음
 		
 		//원래는 이런게 있습니다.
@@ -32,7 +33,7 @@ public class MainClass {
 		// 잘 쓰지 않으니 위에 식을 활용하기. a + ""
 		
 		System.out.println(str);
-		
+		System.out.println(str.getClass().getName()); // 변수타입 확인
 	}
 
 	public static void ex03() {
@@ -53,7 +54,7 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		ex02();
+		ex03();
 	}
 
 }

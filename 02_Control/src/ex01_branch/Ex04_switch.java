@@ -116,7 +116,7 @@ public class Ex04_switch {
 		
 	}
 	public static void main(String[] args) { // ctrl + 스페이스 하면 나옴
-		ex03();
+		ex04();
 	
 
 	}

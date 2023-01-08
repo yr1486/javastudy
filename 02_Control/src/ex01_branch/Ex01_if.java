@@ -6,13 +6,15 @@ public class Ex01_if {
 	
 		// if문
 		
-		int score = 80;
+		int score = 60;
 		
-		if(score >= 60)
+		if(score >= 60) {
 			System.out.println("합격");
+		}
 		
-		if(score < 60)
+		if(score < 60) {
 			System.out.println("불합격");
+		}
 		
 	
 	}
@@ -23,9 +25,10 @@ public class Ex01_if {
 		
 		// 실행문이 1개인 경우 생략할 수 있다.
 		// 실행문이 2개 이상인 경우 반드시 필요하다.
+		
 		// 하지만 일반적으로 생략하지 않는다..! 실행문을 구분하기도 편하기 때문에.
 		
-		int score = 80;
+		int score = 50;
 		
 		if(score >= 60) {
 			System.out.println("합격");
