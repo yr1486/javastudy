@@ -45,7 +45,7 @@ public class Ex01_for {
 
 	public static void ex03() { // 연습문제
 		// 10 ~ 1 거꾸로 출력
-		for(int a=10; a>0; a--) {
+		for(int a = 10; a > 0; a--) {
 			System.out.println(a);
 		}
 	
@@ -57,9 +57,9 @@ public class Ex01_for {
 		// 2 x 1 = 2  //여기서 변하는, 증가하는 값인 1~9까지가 a가 되는 부분임 
 		// 2 x 2 = 4  // 값의 부분은 2 * a
 		
-		int dan = 9; // 변수값을 사용하면 원하는 값의 구구단을 출력 할 수 있음
+		int dan = 2; // 변수값을 사용하면 원하는 값의 구구단을 출력 할 수 있음
 		
-		for(int a = 1; a <= 9; a++) {
+		for(int a = 1; a < 10; a++) {
 			System.out.println(dan + " x " + a + " = " + (dan * a));
 		}
 	

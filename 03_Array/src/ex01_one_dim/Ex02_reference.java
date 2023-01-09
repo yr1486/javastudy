@@ -47,12 +47,6 @@ public class Ex02_reference { //참조
 			System.out.println(a[i]);
 		}
 	}
-
-	public static void ex04() {
-		
-		
-	}
-	
 	public static void main(String[] args) {
 		ex03();
 		

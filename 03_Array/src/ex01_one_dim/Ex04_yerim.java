@@ -7,8 +7,7 @@ public class Ex04_yerim {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+// 수정완료
 	}
 
 }

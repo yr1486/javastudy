@@ -30,9 +30,10 @@ public class Ex03_advanced_for {
 	}
 
 	public static void ex02() {
+		
 		String[] files = {"hello.txt", "hi.txt", "안녕.txt"};
 		
-		for(String file : files) {
+		for(String file : files) { // 위 예제와 같은 경우, files에 있는 값을 file로 한번씩 빼서 사용하겠다..
 			System.out.println(file);
 		}
 		

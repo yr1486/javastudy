@@ -30,7 +30,7 @@ public class Ex03_else_if {
 		
 		int score = 10;
 		
-		if(score < 0 || score > 100) {
+		if( 0 > score || score > 100) {
 			System.out.println("잘못된 점수");
 		}
 		else if(score >= 90) {
@@ -116,7 +116,7 @@ public class Ex03_else_if {
 	
 
 	public static void main(String[] args) {
-		ex04();
+		ex02();
 
 		
 		
