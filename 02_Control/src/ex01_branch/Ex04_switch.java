@@ -55,6 +55,8 @@ public class Ex04_switch {
  		}
 		
 		System.out.println(day + "일은 " + weekName + "요일이다.");
+		
+		
 	}
 	
 	
