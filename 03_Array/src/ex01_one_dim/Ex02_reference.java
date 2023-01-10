@@ -1,10 +1,12 @@
 package ex01_one_dim;
 
 public class Ex02_reference { //참조
+	
+	// 2023-01-09
 
 	public static void ex01() {
 		
-		int[] arr;
+		int[] arr; //여기 저장되는게 참조값!!!(=위치정보)
 		arr = new int[5];
 		
 		System.out.println(arr); // 5개 배열 요소의 참조값 (주소값, 번지값 이라고도 함)
@@ -38,6 +40,9 @@ public class Ex02_reference { //참조
 		for(int i = 0; i < a.length; i++) {
 			b[i] = a[i];
 		}
+//		b[0] = 100;
+//		System.out.println(a[0]);
+//		출력하게되면 a도 똑같이 100의 값이 됨
 		
 		// 기존 배열의 참조값을 신규 배열의 참조값으로 수정
 		a = b;

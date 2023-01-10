@@ -2,12 +2,15 @@ package ex01_one_dim;
 
 public class Ex01_array { // 배열
 	
+	// 2023-01-09
+	
 	/*
 	 	배열이란?
 	 	1. 여러 개의 변수를 하나의 이름으로 관리하는 자료 구조. 제어문으로 접근할 수 있음
 	 	2. 배열의 구성 요소
 	 		1) 배열명: 모든 변수의 대표 이름
 	 		2) 인덱스: 각 변수를 구분하기 위한 위치 정보. 0부터 시작하는 정수값
+	 		// 배열의 이름은 같지만, 각 번호를 구분하기 위한 인덱스가 있음
 	 		
 	 */
 
@@ -25,7 +28,7 @@ public class Ex01_array { // 배열
  	3. 배열 요소
 		1) 배열의 각 변수를 의미
 		2) 배열명[인덱스]
-		3) 배열이 생성되면 자동으로 초기화된다
+		3) 배열이 생성되면 자동으로 초기화된다 //변수는 초기값이 없음
 			0, 0.0, false, null 값으로 초기화된다 (값이 없음을 의미함)
 	 */
 	
@@ -42,7 +45,7 @@ public class Ex01_array { // 배열
 		System.out.println(arr[2]);
 		System.out.println(arr[3]);
 		System.out.println(arr[4]);
-		
+		// 자동으로 0으로 초기화 되어 있음
 	}
 
 	public static void ex02() {
@@ -52,7 +55,7 @@ public class Ex01_array { // 배열
 		
 		// 배열의 요소 순회 (하나씩 접근하기)
 		
-		for(int i = 0; i < 5; i++) {
+		for(int i = 0; i < 5; i++) { // i = 인덱스
 			System.out.println(arr[i]);
 		}
 	}
@@ -77,7 +80,7 @@ public class Ex01_array { // 배열
 		int[] arr = new int[5];
 		
 		// 배열 순회
-		for(int i = 0; i < arr.length; i++) {
+		for(int i = 0; i < arr.length; i++) { //인덱스의 초기값을 0으로 설정
 			System.out.println(arr[i]);
 		}
 		

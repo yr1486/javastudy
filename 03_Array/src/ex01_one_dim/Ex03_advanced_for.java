@@ -1,6 +1,8 @@
 package ex01_one_dim;
 
-public class Ex03_advanced_for {
+public class Ex03_advanced_for { //향상 for문
+	
+	// 2023-01-09
 	
 	public static void ex01() {
 		
@@ -33,7 +35,7 @@ public class Ex03_advanced_for {
 		
 		String[] files = {"hello.txt", "hi.txt", "안녕.txt"};
 		
-		for(String file : files) { // 위 예제와 같은 경우, files에 있는 값을 file로 한번씩 빼서 사용하겠다..
+		for(String file : files) { // 위 예제와 같은 식, files에 있는 값을 file로 한번씩 빼서 사용하겠다..
 			System.out.println(file);
 		}
 		

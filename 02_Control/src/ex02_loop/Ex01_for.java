@@ -60,7 +60,7 @@ public class Ex01_for {
 		int dan = 2; // 변수값을 사용하면 원하는 값의 구구단을 출력 할 수 있음
 		
 		for(int a = 1; a < 10; a++) {
-			System.out.println(dan + " x " + a + " = " + (dan * a));
+			System.out.print(dan + " x " + a + " = " + (dan * a));
 		}
 	
 	}
