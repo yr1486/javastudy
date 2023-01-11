@@ -58,6 +58,7 @@ public class MainClass {
 		
 		// 1 증가 : ++
 		// 2 감소 : --
+		
 		// 전위 연산 (post operator)
 		// ++a 또는 --a
 		// 변수 a의 값을 1 증가(감소) 시킨 뒤에 사용하시오.
@@ -90,10 +91,11 @@ public class MainClass {
 		a = 10;
 		System.out.println(a);
 		
+		// int a = 10;
 		
 	}
 
-	//ex06 메소드 정의
+	// ex06 메소드 정의
 	public static void ex06() {
 		
 		int x = 10;
@@ -111,7 +113,7 @@ public class MainClass {
 		
 	}
 	
-	//ex07 메소드 정의
+	// ex07 메소드 정의
 	public static void ex07() {
 		
 		int account = 10000;
@@ -121,7 +123,6 @@ public class MainClass {
 		account -= 5000; //같은 식 account = account - 50000;
 		System.out.println(account);
 		
-		
 	}
 	
 	//ex08 메소드 정의
@@ -129,15 +130,13 @@ public class MainClass {
 		
 		long account = 123456;
 		
-		// 5% 이자 받으면 얼마?
+		// account 값의 5% 이자 받으면 총 얼마일까?
+		
 		double result;
 		result = account * 1.05;
 		// result = account + account * 0.05;
 		
 		System.out.println(result);
-				
-				
-		
 		
 	}
 	
@@ -146,10 +145,19 @@ public class MainClass {
 	public static void main(String[] args) {
 
 		
-		ex08(); // ex00번째 메소드 호출
+		ex04(); // ex00번째 메소드 호출
 		
 		// 1. 만들고 2. 호출해서 사용
-
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
