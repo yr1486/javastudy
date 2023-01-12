@@ -112,7 +112,7 @@ public class MainClass {
 		
 		// 상수 선언하기
 		// final 키워드로 변수와 상수 구분
-		// 변하지 않는 값
+		// 변하지 않는 값 . 바꾸지 못하는 값
 		
 		final double PI = 3.141592;
 		System.out.println(PI);

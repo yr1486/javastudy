@@ -14,7 +14,7 @@ public class Ex03_else_if {
 			System.out.println("상");
 		}
 		else if(score >= 60) {
-				System.out.println("중");    // if안에 또 if를 집어 넣을때 else if를 씁니다.
+				System.out.println("중");    // if안에 또 if를 집어 넣는 경우를 만들때 else if를 씁니다.
 		}
 		else {
 			System.out.println("하");
@@ -25,10 +25,10 @@ public class Ex03_else_if {
 	
 	public static void ex02() {
 		
-		// 수 90, 우 80, 미 70, 양 60, 가, 잘못된 점수 
+		// 수 90, 우 80, 미 70, 양 60, 가 60미만, 잘못된 점수 출력하기
 		// 힌트 : 잘못된 점수 만들기를 주의해서 봐야함. 잘못된 점수란 0 보다 작거나(<) 100 보다 큰 것 (>).
 		
-		int score = 10;
+		int score = 1000;
 		
 		if( 0 > score || score > 100) {
 			System.out.println("잘못된 점수");
@@ -51,10 +51,10 @@ public class Ex03_else_if {
 		
 	}
 	
-	public static void ex03() { // 연습문제 : 겨울 출력하기
+	public static void ex03() {
 		
 		// 봄345 여름678 가을91011 겨울1212 출력하기
-		// 겨울 12 1 2 를 생각하기. ==> 나눌 경우 나머지로 활용
+		// 겨울 12 1 2 를 생각하기. ==> 나눌 경우 나머지로 활용하여 식을 세우기
 		
 		
 		int month = 0;
@@ -79,8 +79,10 @@ public class Ex03_else_if {
 
 	public static void ex04() {
 		
+		// 오늘 기준 10일 후 무슨 요일인가 출력하기
+		
 		int day = 6;
-		int nDay = 10; // 10일 후
+		int nDay = 10; 
 
 		day += nDay; // ===> 같은식 day = day + nDay;
 		

@@ -140,7 +140,7 @@ public class MainClass {
 	// 예시
 	// 행주도마
 	public static void q8() {
-		String strScore = "75";
+		String strScore = "50";
 		
 		// String > int 로 변환
 		int score = Integer.parseInt(strScore);
