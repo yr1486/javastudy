@@ -18,7 +18,7 @@ public class MainClass {
 		user1.point = 100;
 		user1.isVip = false;
 		
-		// user의 addr 필드 생성(Address 클래스 타입이기 때문에 반드시 new를 이용해 생성해야 한다)
+		// user1의 addr 필드 생성(Address 클래스 타입이기 때문에 반드시 new를 이용해 생성해야 한다)
 		user1.addr = new Address();
 		
 		user1.addr.postcode = "12345";

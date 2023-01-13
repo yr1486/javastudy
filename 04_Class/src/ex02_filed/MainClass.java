@@ -15,8 +15,8 @@ public class MainClass {
 			// Student 객체 생성
 			school.students[i] = new Student(); // 학생 한명 한명을 만드는 작업
 			
-			school.students[i].name = "정숙";
 			school.students[i].stuNo = "10101";
+			school.students[i].name = "정숙";
 			
 			// score 객체 생성
 			school.students[i].score = new Score();

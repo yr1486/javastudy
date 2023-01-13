@@ -1,5 +1,7 @@
 package ex03_constructor;
 
+
+
 public class Person {
 	
 	// 생성자 //아래가 디폴트 생성자와 같은 모습
