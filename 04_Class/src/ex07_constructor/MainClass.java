@@ -11,7 +11,7 @@ public class MainClass {
 		//User1의 info 메소드 호출
 		user1.info();
 		
-		//User 객체 생성 (User(String userId, String userPw) 생성자 호출)
+		//User 객체 생성 ( User(String userId, String userPw) 생성자 호출 )
 		User user2 = new User("admin", "123456");
 		
 		//user2의 info 메소드 호출

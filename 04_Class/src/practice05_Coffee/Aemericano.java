@@ -10,7 +10,20 @@ public class Aemericano {
 	private int extraWater;   // 물
 	
 	// 생성자
+	public Americano(int shotCount, int extraWater) {
+		cups = new Espresso[shotCount];
+		this.shotCount = shotCount;
+		this.extraWater = extraWater;
+	}
+	
+	// 샷 추가 addEspresso 메소드
+	public void addEspresso(Espresso espresso) {
+		
+	}
 	
 	// 조회 info 메소드
+	public void info() {
+		
+	}
 
 }
