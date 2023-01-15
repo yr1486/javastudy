@@ -35,5 +35,9 @@ public class Calculator {
 	
 	// ==> 이름도 같고 개수도 같아서 오버로딩이 되지 않음
 	// ==> 반환타입(int, double은 오버로딩과 연관이 없음!!
+	
+	// int area = cal.getArea(int 3, 4)
+	// double area = cal.getArea(double 3, 3)	
+	// 위 는 가능.
 }
 

@@ -3,19 +3,11 @@ package ex03_method;
 public class Car {
 	
 	// 필드
-	int oilPot; // 1
-	int carSpeed; // 2 pushAccel 마다 속도는 10씩 증가, 최대 속도 100, pushBrake 마다 속도 10씩 감소
+	int oilPot; 
+	int carSpeed; // pushAccel 마다 속도는 10씩 증가, 최대 속도 100, pushBrake 마다 속도 10씩 감소
 	
-	// 기름 넣기 메소드
-	void addoil(int oil) { //반환할게 없음
-		oilPot += oil;
-		if(oilPot > 50)	{
-			oilPot = 50;
-		}
-	}
-
-	
-	void addoil2(int oil) {
+	// 기름넣기 메소드
+	void addoil(int oil) {
 		if(oilPot + oil > 50) {
 			oilPot = 50;
 			return; // 메소드를 종료하시오. // 반환값이 '없으면' 메소드를 종료 하는 의미 ==> 반환 타입이 void인 경우에만 사용 할 수 있다
@@ -48,14 +40,6 @@ public class Car {
 			carSpeed = 0;
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }

@@ -15,6 +15,7 @@ public class Calculator { // 메소드
 	   	 return 반환값
 	   	 }
 	   	 
+	   	 
 	   	 1. 반환값 + 반환타입
 	   	 	메소드 실행(메소드 호출)의 결과
 	   	 2. 메소드명
@@ -34,7 +35,7 @@ public class Calculator { // 메소드
 	 		
 	 	2. 반환값X, 인수O									int a = 0;
 	 		void method(int arg) {						method(a);
-	 			메소드 본문
+	 			메소드 본문								
 	 		}
 	 	
 	 	3. 반환값O, 인수X
@@ -58,14 +59,14 @@ public class Calculator { // 메소드
 	// 덧셈 메소드 정의
 	double addition(double a, double b) {
 		
-		return a + b; // 값을 돌려주겠다
+		return a + b; // 더한 값을 돌려주겠다
 		
 		
 	}
 	// 뺄셈 메소드 정의
 	double subtraction(double a, double b) {
 		
-		return a - b; // 값을 돌려주겠다
+		return a - b; // 뺀 값을 돌려주겠다
 		
 	}
 

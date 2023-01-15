@@ -6,9 +6,9 @@ public class MainClass {
 		
 		Student student = new Student();
 		
+		student.study();
 		student.eat();
 		student.sleep();
-		student.study();
 	}
 
 }

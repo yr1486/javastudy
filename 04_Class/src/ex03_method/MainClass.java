@@ -21,7 +21,7 @@ public class MainClass { //
 			
 			CoffeeMachine coffeeMachine = new CoffeeMachine();
 			
-			CoffeeAndChange coffeeAndChange = coffeeMachine.buyCoffee(500, 1); //(1000,1)
+			CoffeeAndChange coffeeAndChange = coffeeMachine.buyCoffee(1000, 1); //(500,1)
 			System.out.println(coffeeAndChange.coffee);
 			System.out.println(coffeeAndChange.change);
 			
