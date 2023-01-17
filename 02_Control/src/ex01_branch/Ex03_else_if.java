@@ -52,13 +52,10 @@ public class Ex03_else_if {
 	}
 	
 	public static void ex03() {
-		
 		// 봄345 여름678 가을91011 겨울1212 출력하기
 		// 겨울 12 1 2 를 생각하기. ==> 나눌 경우 나머지로 활용하여 식을 세우기
 		
-		
 		int month = 0;
-		
 		int mod = month % 12;
 		
 		
@@ -74,7 +71,6 @@ public class Ex03_else_if {
 		else {
 			System.out.println("가을");
 		}
-		
 	}
 
 	public static void ex04() {
@@ -118,7 +114,7 @@ public class Ex03_else_if {
 	
 
 	public static void main(String[] args) {
-		ex02();
+		ex03();
 
 		
 		

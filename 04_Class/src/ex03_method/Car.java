@@ -8,7 +8,7 @@ public class Car {
 	
 	// 기름넣기 메소드
 	void addoil(int oil) {
-		if(oilPot + oil > 50) {
+		if(oilPot + oil > 50) { //0+50
 			oilPot = 50;
 			return; // 메소드를 종료하시오. // 반환값이 '없으면' 메소드를 종료 하는 의미 ==> 반환 타입이 void인 경우에만 사용 할 수 있다
 		}
@@ -40,6 +40,4 @@ public class Car {
 			carSpeed = 0;
 		}
 	}
-	
-	
 }

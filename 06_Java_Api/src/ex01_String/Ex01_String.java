@@ -10,7 +10,8 @@ public class Ex01_String {
 		// 문자열 리터럴 (Literal)
 		String str1 = "hello";
 		String str2 = "hello";
-		System.out.println(str1 == str2); // true가 나옴. 참조값이 같다는 의미 , 저장된 문자열(hello)이 같다는 의미가 아니다 ==> String은 참조변수이기때문에 주소를 저장!
+		System.out.println(str1 == str2); // true가 나옴. 참조값이 같다는 의미 , 
+		// 저장된 문자열(hello)이 같다는 의미가 아니다 ==> String은 참조변수이기때문에 주소를 저장!
 		
 		// 문자열 리터럴은 Java에 의해서 최적화 되기 때문에
 		// 동일한 리터럴 "hello"를 2번 이상 사용하면
@@ -121,8 +122,8 @@ public class Ex01_String {
 		// 문자열의 일부 문자열을 반환
 		
 		// substring 사용법
-		// 1. substring(int begin) : 인덱스  begin부터 끝까지 반환
-		// 2. substring(int begin, int end) : 인덱스 begin 부터 end 이전까지 반환 (begin <=추출범위 < end)
+		// 1. substring(int begin) ==> 인덱스  begin부터 끝까지 반환
+		// 2. substring(int begin, int end) ==> 인덱스 begin 부터 end 이전까지 반환 (begin <=추출범위 < end)
 		
 		String name = "방예림";
 		
@@ -371,7 +372,7 @@ public class Ex01_String {
 		
 	}
 	public static void main(String[] args) {
-		ex02();
+		lastIndexOf();
 		
 	}
 

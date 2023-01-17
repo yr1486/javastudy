@@ -29,12 +29,10 @@ public class Ex02_while {
 		
 		while(account >= money) {
 			System.out.print(++n + "번째 출금 결과 : ");
-			account -= money;
+			account -= money; //account-money
 			System.out.println("계좌 " + account + "원");
 		}
-		
 	}
-	
 	
 	public static void main(String[] args) {
 		ex02();

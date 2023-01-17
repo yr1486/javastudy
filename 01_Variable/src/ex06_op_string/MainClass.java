@@ -11,9 +11,9 @@ public class MainClass {
 		String str2 = 4 + "달라";
 		String str3 = 100 + 10 + "번지";
 		
-		System.out.println(str1);
-		System.out.println(str2);
-		System.out.println(str3);
+		System.out.println(str1); // 구디아카데미
+		System.out.println(str2); // 4달라
+		System.out.println(str3); // 110번지
 	}
 
 	public static void ex02() {
@@ -32,7 +32,7 @@ public class MainClass {
 		// String str = String.value0f(a);
 		// 잘 쓰지 않으니 위에 식을 활용하기. a + ""
 		
-		System.out.println(str);
+		System.out.println(str); //100
 		System.out.println(str.getClass().getName()); // 변수타입 확인
 	}
 
@@ -53,8 +53,7 @@ public class MainClass {
 	
 
 	public static void main(String[] args) {
-		
-		ex03();
+		ex02();
 	}
 
 }

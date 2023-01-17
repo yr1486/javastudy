@@ -53,8 +53,6 @@ public class Calculator { // 메소드
 	 	*반환값: 메소드가 돌려주는 값
 	 	*인수: 메소드에 전달하는 값
 	 */
-
-	
 	
 	// 덧셈 메소드 정의
 	double addition(double a, double b) {

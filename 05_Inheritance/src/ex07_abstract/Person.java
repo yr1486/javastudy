@@ -24,7 +24,8 @@ public abstract class Person { // abstract 클래스와 abstract 메소드
 	 	추상 메소드
 	 	1. abstract method
 	 	2. 본문이 없는 메소드이다
-	 	3. 중괄호를 없애고, 세미콜론을 붙이고, abstract 키워드를 '메소드' 앞에 추가한다 // public 'void study()' {} ==> ''부분이 메소드 구성 요소 '반환타입 변수 매개변수'
+	 	3. 중괄호를 없애고, 세미콜론을 붙이고, abstract 키워드를 '메소드' 앞에 추가한다 
+	 		public 'void study()' {} ==> ''부분이 메소드 구성 요소 '반환타입 변수 매개변수'
 	 	public void study() {} ==> 이 형태를
 	 	public abstract void study(); 로 만들면 추상 메소드
 	 	//

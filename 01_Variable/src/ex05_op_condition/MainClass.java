@@ -4,7 +4,6 @@ public class MainClass {
 
 		public static void ex01() {
 			
-			
 			int a = 3;
 			int b = 4;
 			
@@ -57,7 +56,6 @@ public class MainClass {
 		
 		
 		public static void ex03() {
-			
 			// Short Circuit Evaluation
 			// 1. 논리 AND의 경우 조건의 결과가 FALSE인 경우가 발생하면 더이상 동작하지 않는다. 최종 결과가 FALSE로 정해졌기 때문이다. 앞에서부터 실행하기 때문에
 			// 2. 논리  OR의 경우 조건의 결과가 TRUE인 경우가 발생하면 더이상 동작하지 않는다. 최종 결과가 TRUE로 정해졌기 때문이다. 앞에서부터 실행하기 때문에
@@ -74,9 +72,6 @@ public class MainClass {
 			
 			System.out.println(b);
 			System.out.println(result2);
-			
-
-		
 		}
 		
 		public static void ex04() { // 연습 문제
@@ -85,7 +80,7 @@ public class MainClass {
 			
 			boolean result = (score >= 70) && (score < 80); // 70점대는 트루 아니면 펄스
 			
-			System.out.println(result);
+			System.out.println(result); //true
 			
 			// boolean result = (score / 10) == 7;  위와 같은 식임
 			
@@ -96,20 +91,19 @@ public class MainClass {
 		
 		public static void ex05() {
 			
-			// 조건 연산
-			// (초건식) ? true 일 때 처리 : false 일 때 처리
-			// > 크다 , < 작다 헷갈리지 말기.
+			// 조건 연산 ==> 삼항 연산
+			// (조건식) ? true 일 때 : false 일 때
 			
 			int score = 50;
 			
-			String result = (score >= 60) ? "합격" : "불합격";     // 삼항 연산자
+			String result = (score >= 60) ? "합격" : "불합격";    
 			
 			// 단항 연산자 : ++a, !조건식
 			// 이항 연산자 : a + b, a + b + c
-			// 삼항 연산자 :
+			// 삼항 연산자 : (score >= 60) ? "합격" : "불합격"; 
 			
 			
-			System.out.println(result);
+			System.out.println(result); //불합격
 				
 		}
 		
@@ -119,7 +113,7 @@ public class MainClass {
 			int n = 3;
 			
 			String result = (n%2 == 0) ? "짝수" : "홀수"; // n의 값을 홀수 짝수로 바꿔주게 되면 결과 값이 달라지는걸 볼수 있음
-			System.out.println(result);
+			System.out.println(result); //홀수
 			
 			
 		}
@@ -128,12 +122,13 @@ public class MainClass {
 			
 			int n = 3;
 			
-			String result = (n % 3 == 0) ? "3의 배수" : ( n % 2 == 0) ? "짝수" : "홀수"; // n의 값을 바꿔주면 결과값 달라짐
-//			String result = (n !=0 && n % 3 == 0) ? "3의 배수" : ( n % 2 == 0) ? "짝수" : "홀수"; 해당 식으로 만들어야 n의 값을 0으로 설정했을때 3의 배수가 아닌 '짝수'로 나오는 정상적인 결과값 도출 가능
+			// String result = (n % 3 == 0) ? "3의 배수" : ( n % 2 == 0) ? "짝수" : "홀수"; // n의 값을 바꿔주면 결과값 달라짐
+			
+			String result = (n !=0 && n % 3 == 0) ? "3의 배수" : ( n % 2 == 0) ? "짝수" : "홀수"; 
+			// 위의 식으로 만들어야 n의 값을 0으로 설정했을때 3의 배수가 아닌 '짝수'로 나오는 정상적인 결과값 도출 가능
 			// 위에 2가지 식을 주석 풀어보면서 결과 도출해보기
 			
-			
-			System.out.println(result);
+			System.out.println(result); // n = 3으로 설정 했을때 : 3의 배수
 
 		}
 		

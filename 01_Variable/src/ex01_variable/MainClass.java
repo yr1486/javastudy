@@ -42,7 +42,7 @@ public class MainClass {
 		
 		// 타입의 구분
 		// 1. primitive type : 기본 타입(소문자로 되어 있음), 값을 저장하는 타입
-		// byte short int long float double boolean char
+		// boolean, char, byte, short, int, long, float, double
 		// 2. reference type : 참조 타입(첫 글자가 대문자로 되어 있음, 모든 클래스는 참조 타입), 값이 저장된 참조값을 저장하는 타입
 		// String 등
 		
@@ -75,9 +75,12 @@ public class MainClass {
 		System.out.println(ch6);
 		
 		// 1. 기본타입 :
-		// 정수 타입1(integer) int
+		// 정수 타입1(integer) 
+		// int
 		// 0, -23, 123
-		// 정수 타입2 long
+		
+		// 정수 타입2 
+		// long
 		// 사용 후 끝에 대문자 L을 붙여 long과 int를 구분 짓는다
 		
 		int age = 32;
@@ -116,14 +119,6 @@ public class MainClass {
 		
 		final double PI = 3.141592;
 		System.out.println(PI);
-		
-		
-		
-		
-		
-
-		
-
 	}
 
 }

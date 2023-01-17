@@ -32,7 +32,7 @@ public class MainClass { //
 		public static void ex03() {
 			Car car = new Car();
 			
-			car.addoil(100);
+			car.addoil(50);
 			
 			for(int n = 0; n < 51; n++) {
 				car.pushAccel();

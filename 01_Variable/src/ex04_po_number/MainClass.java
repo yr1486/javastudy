@@ -32,7 +32,8 @@ public class MainClass {
 		int b = 2;
 		
 		double div = (double)a / b; 
-		//캐스팅을 하나만 바꿔주면 나중꺼는 알아서 바꿔 계산됨 ==> double div = (double)a / (double)b; 위와 답은 같지만 굳이 둘다 안바꿔도 됨
+		// 캐스팅을 하나만 바꿔주면 나중꺼는 알아서 바꿔 계산됨 
+		// ==> double div = (double)a / (double)b; 위와 답은 같지만 굳이 둘다 안바꿔도 됨
 		
 		System.out.println(div);  // 2.5
 		
@@ -45,11 +46,11 @@ public class MainClass {
 				
 		int second = 90;
 				
-		int min = second / 60; // 1분
-		int sec = second % 60; //30초
+		int min = second / 60; 
+		int sec = second % 60;
 				
-		System.out.println(min);
-		System.out.println(sec);
+		System.out.println(min); // 1
+		System.out.println(sec); // 30
 
 			}
 				
@@ -64,7 +65,7 @@ public class MainClass {
 		// 변수 a의 값을 1 증가(감소) 시킨 뒤에 사용하시오.
 		
 		int a = 10;
-		System.out.println(--a);
+		System.out.println(--a); //9
 		
 		
 		//후위 연산(post operator)
@@ -72,8 +73,8 @@ public class MainClass {
 		// 변수 b의 값을 사용한 뒤에 1 증가(감소)시키시오.
 		
 		int b = 10;
-		System.out.println(b++);
-		System.out.println(b);
+		System.out.println(b++); //10
+		System.out.println(b); //11
 
 		
 	}
@@ -103,8 +104,7 @@ public class MainClass {
 		
 		//x와 y 값 교환 (1. 변수에 백업 후 2. 변수에 대입 3. )
 		
-		int temp;
-		temp = x;
+		int temp = x;
 		x = y;
 		y = temp;
 		
@@ -121,7 +121,7 @@ public class MainClass {
 		// account ++ // 같은식이고 왼쪽을 쓰도록 하기 account += 1;
 		
 		account -= 5000; //같은 식 account = account - 50000;
-		System.out.println(account);
+		System.out.println(account); //10000
 		
 	}
 	
@@ -136,31 +136,11 @@ public class MainClass {
 		result = account * 1.05;
 		// result = account + account * 0.05;
 		
-		System.out.println(result);
+		System.out.println(result); //129628.8
 		
 	}
-	
-	
 	
 	public static void main(String[] args) {
-
-		
-		ex04(); // ex00번째 메소드 호출
-		
-		// 1. 만들고 2. 호출해서 사용
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		ex08();
 	}
-
 }

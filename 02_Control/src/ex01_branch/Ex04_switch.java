@@ -9,7 +9,7 @@ public class Ex04_switch {
 	 ...
 	 default: 실행문 ==> else 개념과 같음
 	 
- 	표헌식의 결과로 주로 사용하는 타입
+ 	표현식의 결과로 주로 사용하는 타입
 	int
 	String
 	
@@ -63,7 +63,12 @@ public class Ex04_switch {
 	public static void ex03() {
 		// 수, 우, 미, 양, 가, 잘못된 점수
 	
-		int score = 85;
+		int score = 111;
+		
+		if(0 > score || score >100) {
+			System.out.println("잘못된 점수");
+			return; //메소드를 종료하시오
+		}
 		
 		switch( score / 10) {
 		case 10:
@@ -80,7 +85,7 @@ public class Ex04_switch {
 	public static void ex04() {
 		// 1분기, 2분기, 3분기, 4분기
 		
-		int month = 1;
+		int month = 2;
 		
 		System.out.println((month - 1) / 3 + 1 + "분기");
 		
@@ -117,8 +122,8 @@ public class Ex04_switch {
 
 		
 	}
-	public static void main(String[] args) { // ctrl + 스페이스 하면 나옴
-		ex04();
+	public static void main(String[] args) { 
+		ex03();
 	
 
 	}

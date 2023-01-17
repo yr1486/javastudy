@@ -7,13 +7,13 @@ public class MainClass {
 		// school 객체 생성
 		School school = new School();
 		
-		school.name = "철산초";
+		school.name = "철산초"; // 변수의 초기화
 		school.students = new Student[3]; // 배열의 이름: school.students
 		
 		for(int i = 0; i < school.students.length; i++) {
 			
 			// Student 객체 생성
-			school.students[i] = new Student(); // 학생 한명 한명을 만드는 작업
+			school.students[i] = new Student(); // 학생 한명 한명을 만드는 작업, 세명 만드려면 3번을 생성해야함
 			
 			school.students[i].stuNo = "10101";
 			school.students[i].name = "정숙";
@@ -33,9 +33,5 @@ public class MainClass {
 		
 		
 		}
-
 	}
-
 }
-
-// ctrl + i ==> tap 정리
