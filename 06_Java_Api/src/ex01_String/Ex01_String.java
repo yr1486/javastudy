@@ -1,6 +1,6 @@
 package ex01_String;
 
-public class MainClass {
+public class Ex01_String {
 
 	
 	public static void literal() {
@@ -50,7 +50,7 @@ public class MainClass {
         |-------|
         |"hello"| 0x123
         |-------|
-        |  ...  |
+        |  ...  | 
         |-------|
         |"hello"| 0x456
         |-------|
@@ -101,11 +101,12 @@ public class MainClass {
 		
 		// CharAt 메소드
 		// 문자열의 특정 인덱스의 문자(char)를 반환
+		// 변수.charAt()
 		
 		String name = "방예림";
-		// System.out.println(name.charAt(0));
-		// System.out.println(name.charAt(1));
-		// System.out.println(name.charAt(2));
+		 System.out.println(name.charAt(0));
+		 System.out.println(name.charAt(1));
+		 System.out.println(name.charAt(2));
 		
 		// 위 3문장을 아래 for문으로 만들어 보기
 		for(int i = 0; i <name.length(); i++) {
@@ -116,16 +117,18 @@ public class MainClass {
 
 	public static void substirng() {
 		
-		// substirng 메소드
+		// substring 메소드
 		// 문자열의 일부 문자열을 반환
 		
 		// substring 사용법
-		// 1. substirng(int begin) : 인덱스  begin부터 끝까지 반환
-		// 2. substirng(int begin, int end) : 인덱스 begin 부터 end 이전까지 반환 (begin <=추출범위 <
+		// 1. substring(int begin) : 인덱스  begin부터 끝까지 반환
+		// 2. substring(int begin, int end) : 인덱스 begin 부터 end 이전까지 반환 (begin <=추출범위 < end)
 		
 		String name = "방예림";
+		
 		String familyName = name.substring(0,1); // 0만 의미함
 		String givenName = name.substring(1); // 1부터 끝까지
+		
 		System.out.println(familyName);
 		System.out.println(givenName);
 		// 인터넷 주소에 특정 부분의 경로를 확인할때 사용될 수 있음
@@ -151,10 +154,10 @@ public class MainClass {
 		
 		int idx4 = slogan.indexOf("방예림"); // 없는지도 확인
 		
-		System.out.println("idx1");
-		System.out.println("idx2");
-		System.out.println("idx3");
-		System.out.println("idx4");
+		System.out.println(idx1);
+		System.out.println(idx2);
+		System.out.println(idx3);
+		System.out.println(idx4);
 				
 	}
 		public static void lastIndexOf() {
@@ -167,8 +170,8 @@ public class MainClass {
 			
 			int idx1 = slogan.lastIndexOf("걱정");
 			int idx2 = slogan.lastIndexOf("방예림");
-			System.out.println("idx1");
-			System.out.println("idx2");
+			System.out.println(idx1);
+			System.out.println(idx2);
 			
 			
 		}
@@ -186,12 +189,12 @@ public class MainClass {
 			// 문자열이 지정된 정규식 패턴(Regular Expression)을 포함하면 true 반환
 			
 			
-			String name = "민경태";
+			String name = "방예림";
 			
-			if(name.startsWith("민")) {
-				System.out.println("민씨다.");
+			if(name.startsWith("방")) {
+				System.out.println("방씨다.");
 			} else {
-				System.out.println("민씨가 아니다.");
+				System.out.println("방씨가 아니다.");
 			}
 		
 			
@@ -262,10 +265,10 @@ public class MainClass {
 			// 정규식 패턴(Regular Expression)을 만족하는 부분을 변환한 결과를 반환
 			// 정규식 나중에 배울거야 , 안써도 되유
 			String ip = "61.78.121.242";
-			String replacedIP = ip.replaceAll(".", "_"); // 61_78_121_242 로 바꾸기 
+			String replacedIp = ip.replaceAll(".", "_"); // 61_78_121_242 로 바꾸기 
 			// replaceAll을 사용하면 이상하게 나옴 ==> 모든 글자를 밑줄로 바꾸시오 됨 ==> All말고 replace를 쓰자!!
 			// 정규식에서 마침표는 모든 문자를 의미함
-			System.out.println(replacedIP);
+			System.out.println(replacedIp);
 			
 			
 			
@@ -278,20 +281,14 @@ public class MainClass {
 			// 빈 문자열("") : 문자열의 길이가 0이면 빈 문자열 (length)
 			
 			String str = "";
-			if(str.isEmpty()) {
+			
+			if(str.trim().isEmpty()) {
 				System.out.println("빈 문자열이다.");
 			} else {
 				System.out.println("빈 문자열이 아니다.");
 			}
 			
-			
-			String str2 = " ";
-			if(str2.trim().isEmpty()) {
-				System.out.println("빈 문자열이다.");
-			} else {
-				System.out.println("빈 문자열이 아니다.");
-			}		
-			
+		
 			// isBlank
 			// 빈 문자열이거나 공백 문자로만 구성되었다면 true 반환
 			// JDK 11 이후에서만 사용 가능
@@ -313,6 +310,7 @@ public class MainClass {
 			System.out.println(String.format("%o", number)); // %o : 8진수로 표시하시오
 			System.out.println(String.format("%d", number)); // %d : 10진수로 표시하시오
 			System.out.println(String.format("%x", number)); // %x : 16진수로 표시하시오 (0~9, a,b,c,d,e,f), x가 소문자이면 소문자
+			
 			System.out.println(String.format("%X", number)); // %x : 16진수로 표시하시오 (0~9, A,B,C,D,E,F), x가 대문자이면 대문자
 			
 			
@@ -339,7 +337,7 @@ public class MainClass {
 			String requestURI = url.substring(0, url.indexOf("?")); // https://comic.naver.com/webtoon/detail
 			System.out.println(requestURI);
 			
-			String params = url.substring(url.indexOf("?") + 1); // https://comic.naver.com/webtoon/detail
+			String params = url.substring(url.indexOf("?") + 1); // titleId=758037&no=112&weekday=mon
 			System.out.println(params);
 			
 			
@@ -347,6 +345,7 @@ public class MainClass {
 		
 		public static void ex02() {
 			
+			// 출력이 안됨 .. 이상함
 			String fullName = "a.p.p.l.e.tar.gz";
 			
 			String fileName = "";
@@ -372,7 +371,7 @@ public class MainClass {
 		
 	}
 	public static void main(String[] args) {
-		format();
+		ex02();
 		
 	}
 
