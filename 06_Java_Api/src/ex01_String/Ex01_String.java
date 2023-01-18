@@ -57,14 +57,14 @@ public class Ex01_String {
         |-------|
 	*/
 		
-		// 참조값이 다르다는 의미이다, 저장된 문자열이 다르다는 의미가 아니다
+		// 참조값이 다르다는 의미이다, 저장된 문자열(내용)이 다르다는 의미가 아니다
 		System.out.println(str1 == str2); // false가 나옴
 	}
 		
 	public static void equals() {
 		
 		// equals 메소드
-		// 비교하는 문자열이 동일하면 true, 아니면 false를 반환
+		// 비교하는 '문자열'이 동일하면 true, 아니면 false를 반환
 		
 		String str1 = "hello";
 		String str2 = new String("HELLO");
@@ -74,21 +74,21 @@ public class Ex01_String {
 			System.out.println("str1과 str2는 같은 문자열이다");
 		} else {
 			System.out.println("str1과 str2는 다른 문자열이다");
-		}
+		} // 출력값 : str1과 str2는 다른 문자열이다
 		
 		// 대소문자는 무시함
 		if(str1.equalsIgnoreCase(str2)) {
 			System.out.println("str1과 str2는 같은 문자열이다");
 		} else {
 			System.out.println("str1과 str2는 다른 문자열이다");
-		}
+		} // 출력값 : str1과 str2는 같은 문자열이다
 	}	
 	
 	
 	public static void length() {
 		
 		// length 메소드
-		// 문자열의 길이(글자수)를 반환
+		// 문자열의 길이(글자수)를 반환, ==> 변수.length()
 		
 		String str = "Hello\nWorld";
 		int length = str.length();
@@ -372,7 +372,7 @@ public class Ex01_String {
 		
 	}
 	public static void main(String[] args) {
-		lastIndexOf();
+		equals();
 		
 	}
 

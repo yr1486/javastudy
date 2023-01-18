@@ -1,5 +1,8 @@
 package practice01;
 
+//bankaccount = 설계도
+//mainclass = 실행
+
 public class BankAccount {
 	
 	// 필드

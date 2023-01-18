@@ -107,6 +107,7 @@ public class Ex01_array { // 배열
 		
 		for(int i = 0; i < scores.length; i++) {
 			total += scores[i];
+			
 			if(max < scores[i]) {
 				max = scores[i];
 			}
@@ -171,7 +172,7 @@ public class Ex01_array { // 배열
 		
 		// 02_control, switch 패키지 참고
 		String[] weekName = {"토","일","월","화","수","목","금"};
-				
+								
 		int day = 13;
 		
 		System.out.println(day + "일은 " + weekName[day % weekName.length] + "요일이다.");
