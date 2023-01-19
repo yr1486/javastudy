@@ -40,8 +40,8 @@ public class Ex01_System {
 		// 작업 수행
 		for(char ch = 'A'; ch <= 'Z'; ch++) {
 			// 'A'+ 1 = B 임
-			// str += ch;
-			sb.append(ch);
+			// str += ch; // 53900ns
+			sb.append(ch); // 8500ns
 		}
 		
 		// 종료시간
@@ -55,7 +55,6 @@ public class Ex01_System {
 	 
 	
 	public static void main(String[] args) {
-		
 		ex02();
 		
 		

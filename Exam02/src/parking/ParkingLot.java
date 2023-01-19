@@ -23,6 +23,7 @@ public class ParkingLot {
 		System.out.println("현재 등록된 차량 : " + idx + "대");//자동차를 만들어서 인덱스에 넣을거야 ==> cars[idx] = new Car("",""); 후 idx++; 그리고 idx가 자동차가 들어가는 거기도 하고 자동차의 갯수이기도 하고 인덱스가 그래서 실제 주차장에 주차된 자동차댓수와 같다
 		if(idx == cars.length) {
 			System.out.println("더이상 차량 등록이 불가능합니다");
+			return;
 			
 			// 해봐야함
 			// sc인스턴스를 이용해서 차량번호와 모델명을 입력 받은 뒤 cars 배열에 순차적으로 저장한다
@@ -30,12 +31,13 @@ public class ParkingLot {
 			// 차량번호가 288러1111과 같은 차량의 등록이 성공하면 "차량번호 288러1111 차량이 등록되었습니다" 메시지 출력하기
 			// 기타 발생하지 않은 예외는 발생하지 않은 것으로 간주한다
 		}
-		System.out.println("차량번호 >>> "); // 차량번호를 입력받아서 자동차에 바로 넣겠다, 변수에 넣겠다 2가지로
+		System.out.print("차량번호 >>> "); // 차량번호를 입력받아서 자동차에 바로 넣겠다, 변수에 넣겠다 2가지로
 		// 변수 넣는거
 		String carNo = sc.next(); //넥스트를 사용한 이유 공백없는 문자열로 처리하려고
-		System.out.println("모델 >>> ");
+		System.out.print("모델 >>> ");
 		String model = sc.next();
-		cars[idx++] = new Car(carNo, model); //car 배열에 인덱스 넣어주기
+		Car car = new Car(carNo, model);
+		cars[idx++] = car; //car 배열에 인덱스 넣어주기 , cars[0] = car;  cars[1] = car;  cars[2] = car; ,,,
 		
 		// 메세지 출력
 		System.out.println("차량번호" + carNo + "차량이 등록되었습니다");
@@ -52,7 +54,7 @@ public class ParkingLot {
 	}
 	
 	// 세번째 메소드	
-	public void printAllCar() { // =====> 구현해야함
+	public void printAllCars() { // =====> 구현해야함
 		
 	}
 	
@@ -61,7 +63,7 @@ public class ParkingLot {
 		
 		while(true) { // 무한루프 식
 			
-			System.out.println("1.추가 2.삭제 3.전체 0.종료");
+			System.out.print("1.추가 2.삭제 3.전체 0.종료");
 			String choice = sc.next(); // 문자열로 입력받아야 정상으로 돌아감, int 로 진행하게 되면 '와일문 디폴트값'에 걸리지 않기 때문에 나중에 뻗어버리게 됨 ex) 1.추가2.삭제.3.전체0.종료에다가 1234 중에서 입력안하고 실수로 111가1111(차량번호)를 입력했을때 바로 뻗게될수 있음
 			
 			switch(choice) {
@@ -72,28 +74,15 @@ public class ParkingLot {
 				deleteCar();
 				break;
 			case "3":
-				printAllCar();
+				printAllCars();
 				break;
 			case "0":
-				return; // 이브레이크는 스위치를 끝내는 거야 중괄호 나가면 어차피 와일문에 걸려 ==> return을 써야함 , 그리고 보이드!!!!니까 리턴써야해 왜? 보이드를(=메소드를 끝내는건 리턴이기 때문)
+				return; // 이브레이크는 스위치를 끝내는 거야 중괄호 나가면 어차피 와일문에 걸려 ==> 그리고 보이드!!!!니까 리턴써야해 왜? 보이드를(=메소드를 끝내는건 리턴이기 때문) ==> manage 메소드 종료
 			default: //모두 아닐때
 				System.out.println("존재하지 않는 메뉴 입니다");
 			}
 		}
-		
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
