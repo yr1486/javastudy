@@ -1,0 +1,65 @@
+자바를 설치해 주는 파일(설치가 끝나면 지워도 상관없음)
+C:/GDJ61/installer/jdk-11.0.17_windows-x64_bin.exe
+
+자바 설치는 기본 경로 사용합니다.
+자바 기본 경로
+C:\Program Files\Java\jdk-11.0.17
+
+환경 변수 등록
+C:\Program Files\Java\jdk-11.0.17 경로를
+JAVA_HOME이라는 이름으로 컴퓨터에 등록하기
+
+Path 등록
+JAVA_HOME 디렉터리에 있는 bin 디렉터리에 있는
+모든 파일은 어디서든지 실행할 수 있도록 등록하기
+%JAVA_HOME%\bin
+
+자바코드작성 (소스)
+ -  : javac.exe
+자바바이트코드 (클래스파일)
+ -  : java.exe
+자바실행
+
+git : 형상 관리 도구(소프트웨어 개발 협업 필수 툴)
+
+실행할 프로그램 : bash - 리눅스 기반 프로그램
+
+~ : 홈 디렉터리
+/  : 루트 디렉터리
+.  : 현재 디렉터리
+..  : 상위 디렉터리
+
+1. javastudy 디렉터리를 로컬 레파지토리로 등록하기
+   cd C:/GJD61/javastudy
+   git init
+
+2. 사용자 등록
+   git config user.name '아이디'
+   git config user.email '이메일'
+
+3. github 가입
+   github.com
+
+4. github을 이용해 원격 레파지토리 만들기
+
+5. github에서 personal access token 만들기
+
+6. 로컬 레파지토리에 원격 레파지토리 등록하기(등록한 이름 origin)
+   git remote add origin https://www.github.com/아이디/javastudy.git
+
+7. 로컬 레파지토리에 파일 추가하기
+
+8. 추가된 파일을 추적 시작하기(무대에 올린다 : staging)
+   git add 안녕하세요.txt
+
+9. 로컬 레파지토리 상태 저장하기(커밋 : commit)
+   git commit -m '커밋메시지'
+
+===== 여기까지 하면 로컬 레파지토리는 마무리되고,,,
+
+10. 로컬 레파지토리의 내용을 원격 레파지토리로 올리기
+   git push origin main
+
+.gitignore 파일
+  github에 올리지 않을 디렉터리와 파일을 작성하는 파일
+  가장 먼저 github에 올라가 있어야 한다.
