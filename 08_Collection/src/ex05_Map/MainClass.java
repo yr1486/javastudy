@@ -13,16 +13,17 @@ public class MainClass {
 	
 	/*
 		 	HashMap
-		 	1. 하나의 데이터가 2개의 요소로 구성된다 ==> Entry가 두개의 요소로 구성된다
+		 	1. 하나의 데이터가 2개의 요소로 구성된다 
+		 		==> Entry가 두개의 요소로 구성된다
 		 	2. 용어 정리
 		 		1) Entry : 하나의 데이터
-		 		
-		 		2) Key	 : Entry의 구성 요소, '식별자 역할'을 수행(배열의 인덱스와 같은 역할)
-		 		3) Value : Entry의 구성 요소, 실제 데이터(배열의 저장된 데이터와 같은 역할)
+		 			- Key	: Entry의 구성 요소, '식별자 역할'을 수행(배열의 인덱스와 같은 역할)
+		 			- Value : Entry의 구성 요소, 실제 데이터(배열의 저장된 데이터와 같은 역할)
 		 		
 		 	3. 주로 key는 String을 사용한다. '변수 이름'
 		 	4. 주로 Value는 Object를 사용한다.(변수에 저장된 값)
-		 	5. 'Key는 중복이 불가능'하고, Value는 중복이 가능하다. ====> key값을 변수이름이라고 생각하면 쉬움 ===> key(=변수)는 중복이 불가능하다.
+		 	5. 'Key는 중복이 불가능'하고, Value는 중복이 가능하다. 
+		 	====> key값을 변수이름이라고 생각하면 쉬움 ===> key(=변수)는 중복이 불가능하다.
 		 
 	 */
 	
@@ -32,11 +33,13 @@ public class MainClass {
 		// Person 정보를 HashMap으로 만들기    ====> 겁나 많이씀 중요 중요 중요 중요!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 만들기와 추가하기!!!!
 		
 		//	Map<K, V> 맵은 인터페이스로 불러오면 제네릭이 2개보이고, 키와 밸류 다 ===> 맵의 타입
+		
+		// 문법
 		Map<String, Object> person = new HashMap<String, Object>(); // 실무에 굉장히 많이 나옴 , 수업시간에도 많이쓰임
 		// 	Map<String, Object> person = new HashMap<>(); ===> 뒤에 안써도 가능
 		
 		
-		// 추가하기 (키가 밸류가 모여야 하나의 데이터가 되는거임)
+		// 추가하기 (키와 밸류가 모여야 하나의 데이터가 되는거임)
 		// put(Key, Value)
 		
 		person.put("name", "홍길동");
@@ -45,15 +48,18 @@ public class MainClass {
 		
 		
 		// 수정하기
-		// 기존의 요소를 수정해보자
+		// 기존의 요소를 수정해보자 // 수정도 추가와 똑같이 put을 씀
 		// put(Key, Value)
 		person.put("age", 40); // 기존 key(위에 추가 부분의 key)와 동일한 key를 전달하면 해당 key값의 Value가 수정된다 (덮어씌우기)
 		
 		// 삭제하기
 		// remove(Key)
-		// person.remove("age"); // 뒤에 가지고 있던 40을 반환해버린다
-		// 삭제된 밸류가 반환한다. 밸류는 오브잭트 타입이므로 캐스팅 해야 사용할 수 있다
-		// int age = person.remove("age"); ===> 4o을 반환해서 int age에 담는건데... 40은 Object타입임으로 int가 받을 수 없으니 캐스팅해야 사용할 수 있다
+		// person.remove("age"); 
+		// // 현재 상황에서 리무브를 하면 뒤에 가지고 있던 40을 반환 해버린다 // 어딘가에 반환하는데 변수에 담으면 됨.
+		// // 밸류는 오브잭트 타입이므로 캐스팅 해야 사용할 수 있는 점을 주의하자.
+		// int age = person.remove("age"); 
+		// // ===> 40을 반환해서 int age에 담는건데, 40이 Object 타입임으로 int가 받을 수 없으니 캐스팅한 후 사용할 수 있다
+		
 		int age = (int)person.remove("age");
 		System.out.println("삭제된 나이 " + age);
 		
@@ -166,7 +172,7 @@ public class MainClass {
 
 	}
 	public static void main(String[] args) {
-		ex04();
+		ex01();
 		
 		
 		
