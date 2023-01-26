@@ -116,10 +116,6 @@ public class JSONMainClass {
 		// String 형식의 JSON 데이터
 		String str = "{\"name\":\"james\",\"age\":30,\"height\":180.5,\"isAlive\":true}";
 		
-		//	JSON-Java (JSON in Java) 라이브러리
-	 	//1. 객체를 저장하는 클래스 : JSONObject 클래스 (Map 기반으로 제작된 클래스여서 맵이랑 사용이 비슷해)
-	 	//2. 배열을 저장하는 클래스 : JSONArray 클래스
-		
 		// JSONObject 객체 생성
 		JSONObject obj = new JSONObject(str);
 		
