@@ -25,7 +25,7 @@ public class MainClass {
 	public static void ex01() {
 		
 		// 디렉터리 관련 필수 작업 // 폴더 만들고 삭제하는거 완전 숙지하기 중요!
-		File dir = new File("C:" + File.separator + "storage"); // C드라이브 아래 storate 폴더를 의미한다
+		File dir = new File("C:" + File.separator + "storage"); // C드라이브 아래 storage 폴더를 의미한다
 		
 		if(dir.exists() == false) { // exists ==> 없으면, 트루
 			dir.mkdirs(); //폴더 만드는 명령어
