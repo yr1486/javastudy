@@ -14,8 +14,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class JSONMainClass {
-	
-		
 		/*
 		 	아주 중요함
 		 	JSON
@@ -24,7 +22,6 @@ public class JSONMainClass {
 		 	2. 객체는 {} 중괄호로 표기하고, 배열은 [] 대괄호로 표기한다
 		 	3. 맵이랑 비슷함 키와 밸류 처럼
 		 		property (프로퍼티) 와 value (값) 로 데이터를 구성한다
-		 	
 		 */
 
 		/*
@@ -34,7 +31,6 @@ public class JSONMainClass {
 		 */
 
 	public static void ex01() {
-
 		// 목표. 아래 JSON 만들기
 		
 		/*
@@ -86,9 +82,6 @@ public class JSONMainClass {
 			]
 
 		 */
-
-	
-	
 		JSONObject product1 = new JSONObject();
 		product1.put("model", "세탁기");
 		product1.put("maker", "삼성");
@@ -219,7 +212,7 @@ public class JSONMainClass {
 	}
 	
 	public static void main(String[] args) {
-		ex05();
+		ex02();
 	}
 
 }

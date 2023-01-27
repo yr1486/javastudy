@@ -1,7 +1,9 @@
 package practice;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -224,8 +226,34 @@ public class MainClass {
 			}
 		}
 	}	
+	
+	public static void ex06() {
+		
+		// 문제6
+		// C:\storage\diary.txt 파일을 C:\storage2\diary.txt 파일로 이동하시오.
+		// 이동에 소요된 시간을 출력하시오
+		
+		File dir = new File("C:" + File.separator + "storage", "diary.txt");
+		if(dir.exists() == false) {
+			dir.mkdir();
+		}
+		
+		File file = new File(dir, "storage2");
+		
+		BufferedReader br = null;
+
+		try {
+			br = new BufferedReader(new FileReader(file));
+
+			
+
+
+	}
+	
+		
+		
 	public static void main(String[] args) {
-		ex05();
+		ex06();
 
 	}
 }

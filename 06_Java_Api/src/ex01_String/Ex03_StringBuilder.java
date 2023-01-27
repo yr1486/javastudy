@@ -28,3 +28,4 @@ public class Ex03_StringBuilder {
 	}
 
 }
+// 특별한 사유 아니면 버퍼말고 빌더 쓰면 됨
