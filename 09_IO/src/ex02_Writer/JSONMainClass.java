@@ -103,7 +103,7 @@ public class JSONMainClass {
 	public static void ex03() {
 		// String 형식의 JSON 데이터
 		
-		//{"name":"james","age":30,"height":180.5,"isAlive":true}
+		// {"name":"james","age":30,"height":180.5,"isAlive":true}
 		// 이렇게 밖에다가 쓴다음에 따로 써놓은 String str = "";에 ""안해 복붙해서 넣어주면 자바가 알아서 아래 형태로 바꿔줌 
 		
 		// String 형식의 JSON 데이터
@@ -150,6 +150,8 @@ public class JSONMainClass {
 			
 			System.out.println(model + "," + maker + "," + price);
 		}
+		System.out.println();
+		
 		// 2. 향상 for문
 		// 향샹 for문을 사용하려면 JSONObject를 object로 쓴 후 캐스팅 해가야함 오브젝트는 캐스팅해서 쓰기
 		for(Object obj : products) {
@@ -212,7 +214,7 @@ public class JSONMainClass {
 	}
 	
 	public static void main(String[] args) {
-		ex02();
+		ex05();
 	}
 
 }

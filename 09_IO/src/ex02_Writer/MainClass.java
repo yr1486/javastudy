@@ -58,6 +58,7 @@ public class MainClass { //writer 파일에 글자를 넣어주는 메소드
 			// 모든 스트림 작업은 예외처리를 반드시 해야함 try catch
 
 			System.out.println("ex01.txt 파일이 생성되었다.");
+			
 		} catch(IOException e) {
 			e.printStackTrace(); // 캐치코드는 고민하지말고 이 문장 넣기
 		} finally { // 예외와 상관없이 반드시 실행되는 코드
@@ -162,7 +163,6 @@ public class MainClass { //writer 파일에 글자를 넣어주는 메소드
 		
 	}
 	
-	
 	public static void ex04() {
 	
 		File dir = new File("C:" + File.separator + "storage");
@@ -227,7 +227,7 @@ public class MainClass { //writer 파일에 글자를 넣어주는 메소드
 	}
 
 	public static void main(String[] args) {
-		ex04();
+		ex05();
 		
 	}
 

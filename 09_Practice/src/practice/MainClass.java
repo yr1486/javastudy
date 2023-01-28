@@ -92,7 +92,7 @@ public class MainClass {
 
 			}
 			System.out.println();
-			System.out.println(fileCount + "개 파일 " + new DecimalFormat("#,##o").format(totalFileSize) + " 바이트");
+			System.out.println(fileCount + "개 파일 " + new DecimalFormat("#,##0").format(totalFileSize) + " 바이트");
 		}
 	}
 
@@ -166,7 +166,7 @@ public class MainClass {
 	}
 
 	public static void ex05() {
-		// 문제5. 예외가 발생한 경우 예외 메시지와 예외 발생 시간을 저장한
+		// 문제5. 예외가 발생한 경우 예외 메시지와 예외 발생 시간을 저장한 C:\storage\log.txt 파일을 생성하시오.
 		// C:\ storage \ log.txt
 		// 2023-01-26 12:08:30 / by zero
 
@@ -233,21 +233,44 @@ public class MainClass {
 		// C:\storage\diary.txt 파일을 C:\storage2\diary.txt 파일로 이동하시오.
 		// 이동에 소요된 시간을 출력하시오
 		
-		File dir = new File("C:" + File.separator + "storage", "diary.txt");
-		if(dir.exists() == false) {
-			dir.mkdir();
-		}
 		
-		File file = new File(dir, "storage2");
+		File from = new File("C:" + File.separator + "storage", "diary.txt");		
+		
+		File toDir = new File("C:" + File.separator + "storage2");
+		if(toDir.exists() == false) {
+			toDir.mkdirs();
+		}
+		File to = new File(toDir, from.getName());
 		
 		BufferedReader br = null;
+		BufferedWriter bw = null;
 
 		try {
-			br = new BufferedReader(new FileReader(file));
+			long startTime = System.currentTimeMillis();
 
+			br = new BufferedReader(new FileReader(from));
+			bw = new BufferedWriter(new FileWriter(to));
 			
+			String line = null;
+			while((line = br.readLine()) != null) {
+				bw.write(line);
+				bw.newLine();
+			}
+			
+			bw.close();
+			br.close();
+			
+			if(from.length() == to.length()) {  // 복사 성공했다면 삭제
+				from.deleteOnExit();
+			}
 
-
+			long stopTime = System.currentTimeMillis();
+			
+			System.out.println("이동에 걸린 시간 : " + (stopTime - startTime) + "밀리초");
+			
+		} catch(IOException e) {
+			e.printStackTrace();
+		} 
 	}
 	
 		
