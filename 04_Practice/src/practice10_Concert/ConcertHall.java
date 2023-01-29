@@ -12,11 +12,13 @@ public class ConcertHall {
 	private int[] seatCount = {20, 30, 40};  // S석 20개, R석 30개, A석 40개
 	
 	// 생성자
+	// ==> 생성자가 너무 어려움.
 	public ConcertHall(String hallName) {
 		this.hallName = hallName;
 		seatGroups = new SeatGroup[seatTypes.length];  // S, R, A석이 있음을 의미
 		for(int i = 0; i < seatGroups.length; i++) {
 			seatGroups[i] = new SeatGroup(seatTypes[i], seatCount[i]);
+			// ==> new SeatGroup(seatTypes[i], seatCount[i]); 은 생성자를 호출한거 같은데 왜 이런 모양인지 모르겠음...앞에 new가 붙는..
 		}
 		sc = new Scanner(System.in);
 	}

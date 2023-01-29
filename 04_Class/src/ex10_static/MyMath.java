@@ -3,7 +3,6 @@ package ex10_static;
 public class MyMath {
 	
 	// ctrl+ shift + x, y ==> 대문자 소문자 변환 단축키
-	
 	// static 붙어있는 애들은 클래스 영역에 '하나만' 만들어서, 다 가져다가 쓸 수 있게 해준다
 	
 	/*
@@ -29,8 +28,6 @@ public class MyMath {
 		return PI * radius * radius;
 		
 	}
-	
-	
 	
 	public static double max(double...numbers) { //... -> 배열로 해석
 		double max = Double.MIN_VALUE; //이름 대문자니까 클래스로 불렀네. .다음 대문자니까 상수네

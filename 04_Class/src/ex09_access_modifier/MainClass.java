@@ -19,6 +19,8 @@ public class MainClass {
 		// user 객체의 pw 확인하기
 		System.out.println(user.getPw());
 		
+		user.isVip();
+		System.out.println(user.isVip());
 	}
 
 }

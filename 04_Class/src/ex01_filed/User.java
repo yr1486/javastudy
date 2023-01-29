@@ -12,6 +12,8 @@ public class User { // 사용자
 	 	2. 일반 변수와 달리 자동으로 초기화된다 = 배열 초기화와 같음
 	 	
 	 */
+	// 생성자를 만들지 않았으니 컴파일러가 기본 생성자를 추가한 상태
+	
 	
 	// 아래 4개를 필드라고 부르며, 초기값은 아래와 같다
 	
@@ -21,5 +23,4 @@ public class User { // 사용자
 	boolean isVip; 		// false 값
 	Address addr;		// null
 	
-	// String을 제외한 나머지 클래스들은 
 }

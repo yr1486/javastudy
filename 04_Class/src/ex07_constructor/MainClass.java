@@ -2,14 +2,14 @@ package ex07_constructor;
 
 public class MainClass {
 	
-	public static void ex01() {
+	public static void ex01() { // User
 		
 		// User 객체 생성 (User() 생성자 호출)
 		
-		User user1 = new User();
+//		User user1 = new User();
 		
-		//User1의 info 메소드 호출
-		user1.info();
+		// User1의 info 메소드 호출
+//		user1.info();
 		
 		//User 객체 생성 ( User(String userId, String userPw) 생성자 호출 )
 		User user2 = new User("admin", "123456");

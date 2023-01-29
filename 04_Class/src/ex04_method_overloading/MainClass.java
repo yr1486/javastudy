@@ -3,13 +3,8 @@ package ex04_method_overloading;
 public class MainClass {
 
 	public static void main(String[] args) {
-
-		// Calculator 객체 선언
-		Calculator calc;
-		
-		// Calculator 객체 생성
-		calc = new Calculator();
-		
+		// Calculator 객체 선언 및 생성
+		Calculator calc = new Calculator();
 		
 		// addition(double a, double b) 호출
 		// 호출의 1단계 
@@ -22,9 +17,10 @@ public class MainClass {
 		double result = calc.addition(1.5, 2.5);
 		System.out.println(result);
 		
+		// 더블 타입 배열 생성
+		double[] arr = {1.1, 2.2, 3.3};
 		
 		//addition(double[] numbers) 호출
-		double[] arr = {1.1, 2.2, 3.3};
 		//호출하고 결과 받아오기
 		double result2 = calc.addition(arr);
 		System.out.println(result2);

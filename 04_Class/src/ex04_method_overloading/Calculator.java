@@ -23,15 +23,11 @@ public class Calculator {
 		return total;
 	}
 
-	// 같은 기능을 사용하려면 같은 이름의 변수를 사용하기, 단 매개변수는 다르게 지정하기
-	
-	// -------
-	
 	
 	// 예제) 삼각형 넓이 구하기 중 오버로딩이 되는지 생각해보기
 	
 	// int area = cal.getArea(3,4)
-	// double area = cal.getArea(3.3)	
+	// double area = cal.getArea(3,3)	
 	
 	// ==> 이름도 같고 개수도 같아서 오버로딩이 되지 않음
 	// ==> 반환타입(int, double은 오버로딩과 연관이 없음!!

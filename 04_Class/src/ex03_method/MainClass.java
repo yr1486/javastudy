@@ -32,8 +32,8 @@ public class MainClass { //
 		public static void ex03() {
 			Car car = new Car();
 			
-			car.addoil(50);
-			
+			car.addoil(51);
+		
 			for(int n = 0; n < 51; n++) {
 				car.pushAccel();
 			}
@@ -49,7 +49,7 @@ public class MainClass { //
 			}
 		
 	public static void main(String[] args) {
-		ex03();
+		ex02();
 		
 	}
 	

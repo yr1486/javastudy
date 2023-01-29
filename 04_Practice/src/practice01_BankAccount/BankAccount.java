@@ -3,8 +3,8 @@ package practice01_BankAccount;
 public class BankAccount {
 
 	// 필드
-	private String accNo;
-	private long balance;
+	private String accNo; // 계좌번호
+	private long balance; // 돈
 	
 	// 생성자
 	public BankAccount(String accNo, long balance) {

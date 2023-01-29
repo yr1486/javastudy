@@ -6,13 +6,13 @@ public class User {
 	String id;
 	String pw;
 	
-	// 생성자
+	// 생성자1
 	User() {
 		id = "anonymous";
 		pw = "1234";
 	}
 	
-	
+	// 생성자2
 	User(String userId, String userPw) {
 		id = userId;
 		pw = userPw;

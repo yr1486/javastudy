@@ -6,7 +6,7 @@ public class MainClass {
 
 		Soldier soldier = new Soldier();
 		
-		soldier.reload(0);
+		soldier.reload(10);
 		soldier.shoot();
 		
 		//soldier 클래스에 아무것도 없음 ===> Gun에서 불러온 결과들임 ==> 솔저가 자식의 역할이기 때문에
