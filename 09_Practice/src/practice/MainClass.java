@@ -2,10 +2,13 @@ package practice;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -13,8 +16,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
-
-
 
 public class MainClass {
 
@@ -125,7 +126,6 @@ public class MainClass {
 		}
 
 	}
-
 
 	public static void ex04() {
 
@@ -273,10 +273,78 @@ public class MainClass {
 		} 
 	}
 	
+	public static void ex07() {
+		// 문제7. System.in은 키보드로부터 바이트 데이터를 입력 받는 InputStream이다.
+		// System.in으로부터 문장 1개를 입력 받아서 출력하시오
+		// Scanner 대신 BufferedReader를 사용하시오
+		// 바이트스트림을 문자 스트림으로 바꿔야함
+		
+			BufferedReader br = null;
+			
+			try {
+				br = new BufferedReader(new InputStreamReader(System.in)); // 괄호안에 파일간의 연결이 아닌 키보드와 연결을 하는거임 어려운게 아님 
+				//키보드가 들어오는데이터가 문자로 바끼고 속도가 향상된다!! ==> 괄호부터니까 괄호부터 밖으로 해석하기
+				// InputStreamReader 인풋스트림을 리더로 바꿔주는애
+				System.out.println(" 문장 입력 >>> ");
+				String sentence = br.readLine(); // 리드라인 메소드 역할 찾아보기
+
+				System.out.println("입력된 문장 : " + sentence);
+				
+				// 파일의 정보를 읽어들일때 스캐너로 읽어 들일 수 있다
+		}catch(IOException e) {
+			e.printStackTrace();
+			
+		}finally {
+				try {
+					if(br != null) {
+						br.close();
+					}
+				}catch(IOException e) {
+					e.printStackTrace();
+				}
+		}
+
+	}
+
+	public static void ex08() {
+		// 문제8. 키보드로부터 하나의 문장을 입력 받은 뒤 C:\storage\ex08.txt 파일에 출력하시오
+		// Scanner와 DataOutputStream을 사용하시오
+		
+		Scanner sc = new Scanner(System.in);
+		DataOutputStream dos = null;
+		
+		try {
+			
+			dos = new DataOutputStream(new FileOutputStream(new File("C:" + File.separator + "storage", "ex08.txt")));
+		
+			System.out.println("문장 입력 >>> ");
+			String sentence = sc.nextLine();
+
+			dos.writeUTF(sentence);
+			
+			sc.close();
+		
+	}catch(IOException e) {
+		e.printStackTrace();
+		
+	}
+		
+	}
+	
+	public static void ex09() {
+		// 문제9. C:\GDJ61\installer\eclipse-jee-2021-03-R-win32-x86_64.zip 파일을
+		// C:\storage\eclipse.zip 로 복사하시오
+		
+		// 읽어들이기 불러오기 from to를 잘 활용해보자.
 		
 		
+		
+		
+		
+	}
+	
 	public static void main(String[] args) {
-		ex06();
+		ex09();
 
 	}
 }
