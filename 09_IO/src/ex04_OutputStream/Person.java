@@ -15,9 +15,6 @@ import java.io.Serializable;
  	==> 뭉쳐있는걸 직렬화해서 보내면 다시 처음에 그 뭉쳐있는 모습으로 정렬을 해야하니까 필드값에다가 정렬하는거임
  */
 
-
-
-
 public class Person implements Serializable { //	// 직렬화 처리 방법 1임
 	
 	private static final long serialVersionUID = 7033755836244474051L; // 직렬화 처리방법 2 / 중복이 없는 값
@@ -32,7 +29,7 @@ public class Person implements Serializable { //	// 직렬화 처리 방법 1임
 	private double height;
 	private boolean isAlive;
 	
-	// 객체 생성방법은 일반적으로 2개임 ==> 빈 폴더가 객체 생성하는 방법의 여러가지를 나열한거임.. 세터로 만들기, 컨스트럭터로 만들기, 빌더로만들기 등등
+	// 객체 생성방법은 일반적으로 2개임 ==>세터 또는 컨스트럭터 / 빈 폴더가 객체 생성하는 방법의 여러가지를 나열한거임.. 세터로 만들기, 컨스트럭터로 만들기, 빌더로만들기 등등
 	
 	// 1. 디폴트 생성자의 세터 호출하기 //디폴트 생성자와 세터를 이용하는거.
 	// 2. 컨스트럭터 // 생성자를 직접 만들어 내는 방식!! 직접 값을 받아서!!!! this.id = id; 처럼

@@ -39,7 +39,6 @@ public class MainClass {
 		FileOutputStream fos = null;
 		
 		try {
-			
 			/*
 			  	출력 단위
 				1. int : 1개 출력
