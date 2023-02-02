@@ -11,6 +11,7 @@ public class Americano {
 	private int idx;          // cups 배열의 인덱스
 	
 	// 생성자
+	// 설명 : 똑같이 샷카운트와 엑스트라워터를 매개번수로 받는 생성자를 생성하고, 필드 컵스가
 	public Americano(int shotCount, int extraWater) {
 		cups = new Espresso[shotCount];
 		this.shotCount = shotCount;
