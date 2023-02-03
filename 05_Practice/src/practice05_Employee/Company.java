@@ -15,7 +15,7 @@ public class Company {
 	
 	public Company() { // 이 회사의 생성자를 만들어주고. 필드를 초기화 했는데
 		employees = new Employee[5];  // 내 회사는 사원을 최대 5명 고용할 수 있는 회사여서 배열의 길이만. 5로 설정해줬어. 아직 생성전. 
-		sc = new Scanner(System.in); // 얘는 뭐 스캐너 초기화
+		sc = new Scanner(System.in); // 얘는 뭐 스캐너 초기화 부모클래스에서 생성하면 자식에서도 다 쓸수 있으니까 선언부가 앞인거임.
 	}
 	
 	// 설명 : 그리고 직원을 뽑아야 하는데 최대 5명만 고용할 수있으니까
@@ -54,17 +54,17 @@ public class Company {
 		System.out.println("사원 등록 완료. 현재 등록된 사원 " + idx + "명"); // 그다음 만들어준 인덱스가 몇개 찼는지 알수 있는 출력문을 만들었어.
 	}
 	
-	// 그리고 이제 인덱스 5개에 채워준 값을 활용할건데. 없을수도있고 삭제할숟 있잖아. 
+	// 그리고 이제 인덱스 5개에 채워준 값을 활용할건데. 없을수도있고 삭제할수도 있잖아. 
 	public void dropEmployee() {
-		if(idx == 0) {
+		if(idx == 0) { // 인덱스의 값이 0일 경우.............를 설정해주고 근데 사실...여기서 헷갈렸는데.. 인덱스 0부터 시작하는데 왜 0이 등록이 없지..하고 조금 막혔어..
 			System.out.println("등록된 사원이 없습니다.");
 			return;
 		}
 		System.out.print("삭제할 사원번호 >>> ");
 		int empNo = sc.nextInt();
-		for(int i = 0; i < idx; i++) {
+		for(int i = 0; i < idx; i++) { 
 			if(empNo == employees[i].getEmpNo()) {
-				System.arraycopy(employees, i + 1, employees, i, idx - 1 - i);
+				System.arraycopy(employees, i + 1, employees, i, idx - 1 - i); //임플로이 
 				employees[--idx] = null;
 				System.out.println("사원 삭제 완료. 현재 등록된 사원 " + idx + "명");
 				return;
@@ -83,25 +83,25 @@ public class Company {
 		for(int i = 0; i < idx; i++) {
 			if(empNo == employees[i].getEmpNo()) {
 				System.out.println("사원 조회 완료. 조회된 사원 정보");
-				employees[i].info();
-				System.out.println();
+				employees[i].info(); // 부모가 편하게 갖다 쓰려고.
+				System.out.println(); // 
 				return;
 			}
 		}
 		System.out.println("사원번호 " + empNo + "인 사원은 존재하지 않습니다.");
 	}
 	
-	public void printAllEmployees() {
+	public void printAllEmployees() { // 이제 전체 직원의 급여를 내가 알고싶어서 이런 메소드를 만들었꼬. 만약 또 직원이 0일 경우를 대비해서 조건문을 돌렸고
 		if(idx == 0) {
 			System.out.println("등록된 사원이 없습니다.");
 			return;
 		}
-		int totalPay = 0;  // 전체 사원의 급여 합계
+		int totalPay = 0;  // 전체 사원의 급여 합계  // 그담 조건문으로 예외를 처리ㅎ했으니까 . 내가 고용한 직원들이 다시한번 몇명있는지 출력해서 보고
 		System.out.println("전체 사원 목록(" + idx + "명)");
 		for(int i = 0; i < idx; i++) {
 			employees[i].info();
-			System.out.println("[월급:" + employees[i].getPay() + "원]");
-			totalPay += employees[i].getPay();
+			System.out.println("[월급:" + employees[i].getPay() + "원]"); // 이 직원들의 월급 겟페이로 다불러와
+			totalPay += employees[i].getPay(); //
 		}
 		System.out.println("[사원 전체 급여:" + totalPay + "원]");
 	}
