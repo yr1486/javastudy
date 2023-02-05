@@ -10,7 +10,7 @@ public class Memo01 {
 	public static void ex01() {
 		
 	
-		
+		// 하이하이하이하이하이..
 	}
 	
 	
