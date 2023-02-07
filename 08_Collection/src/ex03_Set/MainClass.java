@@ -17,7 +17,7 @@ public class MainClass {
 		// HashSet 객체의 선언 및 생성 과정
 		Set<String> set = new HashSet<String>(); // Set은 인터페이스! 컨트롤 스페이스, HashSet도 인터페이스!!컨트롤 스페이스
 		
-		// 추가 (같은 값은 중복 저장되지 않고 생성됨)
+		// 추가 (같은 값은 중복 저장되지 않고 생성(진행됨)
 		set.add("spring");
 	//	set.add("spring"); ==> 중복 저장 안됨
 	//	set.add("spring"); ==> 중복 저장 안됨

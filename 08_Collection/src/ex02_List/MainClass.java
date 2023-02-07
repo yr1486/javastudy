@@ -19,6 +19,7 @@ public class MainClass {
 		list.add("autumn");
 		list.add("frog"); // 삭제 해보자
 		list.add("winter");
+		
 		list.add(0, "spring"); // 인덱스 0에 spring 추가됨
 		
 		// 배열 수정
@@ -44,22 +45,24 @@ public class MainClass {
 		List<Integer> list = Arrays.asList(1,2,3,4,5);
 		
 		// 리스트 길이 구하기 ( = 배열의 길이 구하기)
-		System.out.println("리스트 길이 :" + list.size());
+		System.out.println("리스트 길이 :" + list.size()); // 5
 		
 		// 개별 요소 확인하는 방법
-		System.out.println("첫번째 요소 : " + list.get(0));
-		System.out.println("두번째 요소 : " + list.get(1));
-		System.out.println("마지막 요소 : " + list.get(list.size() - 1));
+		System.out.println("첫번째 요소 : " + list.get(0)); // 1
+		System.out.println("두번째 요소 : " + list.get(1)); // 2
+		System.out.println("마지막 요소 : " + list.get(list.size() - 1)); // 5
+		// System.out.println(list.size(1)); ==> 왜 안되지?
+		
 		
 		// 리스트 순회 해보기
-		
 		// 모든 요소의 합계 구하기
+		
 		int total = 0;
 	//	for(int i = 0; i < list.size(); i++) { //length 대신 size 로 쓰이는 거, 이문장이 보통 우리가 쓰던 문장인데
 		for(int i = 0, length = list.size(); i < length; i++) { // 위 문장을 개선한 for문 이라고 보면됨, 가운데 초기값은 최초 한번만 실행이 되는,
 			total += list.get(i);
 		}
-		System.out.println("모든 요소의 합 : " + total);
+		System.out.println("모든 요소의 합 : " + total); // 5
 		
 		
 	}
@@ -67,13 +70,12 @@ public class MainClass {
 	
 	public static void ex03() {
 		
-		// List<User> userList = new ArrayList<User>(); // 배열인데 길이가 없는 모습 ==> 이러면 돌아가지 않음 처음에 얼마라고 길이의 값을 줘야함
-		List<User> userList = new ArrayList<User>();
+		List<User> userList = new ArrayList<User>(); // 배열인데 길이가 없는 모습 ==> 이러면 돌아가지 않음 처음에 얼마라고 길이의 값을 줘야함
 		
 		for(int i = 0; i < 3; i++) { // 개선한 for문도 익혀보기
 			
 			User user = new User("user", "123456");
-			userList.add(user);
+			userList.add(user); // ==> 유저리스트 배열에. 유저를 추가했다 ? 무슨말인지 모르겠음.
 			System.out.println(userList.get(i)); //유저리스트에 저장된 요소를 하나씩get 가져오기
 			
 		} 
@@ -92,3 +94,6 @@ public class MainClass {
 	}
 
 }
+
+
+

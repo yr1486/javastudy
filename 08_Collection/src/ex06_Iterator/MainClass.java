@@ -58,7 +58,7 @@ public class MainClass {
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		
-		// 해쉬맵에서는 add 사용 x put이 add역할 함
+		// 해쉬맵에서는 add 사용x put이 add역할 함
 		
 		map.put("name", "방예림");
 		map.put("age", 32);
@@ -88,28 +88,9 @@ public class MainClass {
 		*/
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 	public static void main(String[] args) {
-		ex03();
+		ex01();
 	}
 
 }

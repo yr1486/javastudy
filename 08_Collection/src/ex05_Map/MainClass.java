@@ -61,7 +61,7 @@ public class MainClass {
 		// // ===> 40을 반환해서 int age에 담는건데, 40이 Object 타입임으로 int가 받을 수 없으니 캐스팅한 후 사용할 수 있다
 		
 		int age = (int)person.remove("age");
-		System.out.println("삭제된 나이 " + age);
+		System.out.println("삭제된 나이 " + age); //40
 		
 		
 		// 동일한 값이 저장되지 않는 것 set,
@@ -71,8 +71,11 @@ public class MainClass {
 		
 		
 		// 확인하기
-		System.out.println(person);//{name=홍길동, age=30} ===> 엔트리가 2개로 구성된 맵이다.
-		// key값을 변수이름이라고 생각하면 쉬움 //  Object는 전부 저장할 수 있음
+		System.out.println(person);// {name=홍길동}
+		
+		
+		// {name=홍길동, age=30} ===> 엔트리가 2개로 구성된 맵이다.
+		// key값을 변수이름이라고 생각하면 쉬움 //  Objec 타입은 전부 저장할 수 있음
 		// 
 		
 	}
@@ -109,12 +112,14 @@ public class MainClass {
 		// 1. key만 모두 가져온 뒤, 해당 key값을 가진 Value를 가져오기
 		Set<String> keySet = dictionary.keySet(); // 키 세트로 가져오기 , == 키만 빼서 가져오기
 		// set는 인덱스가 업으니까 일반for문 못씀 
-		// 저위에 봄여름가을겨울이 순서대로 들어있지 않음. 동전지갑에서 동전뺴는데 순서없음
+		// 저 위에 봄여름가을겨울이 순서대로 들어있지 않음. 동전지갑에서 동전뺴는데 순서없음
 		for(String key : keySet) {
 			System.out.println(key + ":" + dictionary.get(key)); //get메소드는 키만 전달하면 가져올수있어!!!!!!
 		}
 		
-		// 2. Entry를 모두 가자ㅕ온 뒤, key와 Value로 분리하기
+		System.out.println();
+		
+		// 2. Entry를 모두 가져온 뒤, key와 Value로 분리하기
 		// 쌤은 이걸로 많이씀
 		
 		//for(엔트리 : 맵) 맵을 하나씩뺴서 엔트리에다 담은 향상for문 모습
@@ -172,7 +177,7 @@ public class MainClass {
 
 	}
 	public static void main(String[] args) {
-		ex01();
+		ex03();
 		
 		
 		

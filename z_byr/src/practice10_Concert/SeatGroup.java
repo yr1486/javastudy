@@ -77,11 +77,14 @@ public class SeatGroup {
 	public boolean cancel() {
 		info(); //현재 예매내역
 		String name = JOptionPane.showInputDialog("취소자 성함을 입력하세요.");
-		for(int i = 0; i < seats.length; i++ ) { // 어딨는지 모르니까 풀 포문 돌리는거지
-			if(seats[i].isOccupied() && seats[i].isMatched(name)); // 같은 이름은 없다는 가정으로 풉니다
-			seats[i].cancel();
-			JOptionPane.showMessageDialog(null, "예약자 " + name + "의 예약이 취소되었습니다.");
-			return true;
+		for(int i = 0; i < seats.length; i++) { // 어딨는지 모르니까 풀 포문 돌리는거지
+			if(seats[i].isOccupied()) {
+				if(seats[i].isMatched(name)) { // 같은 이름은 없다는 가정으로 풉니다
+					seats[i].cancel();
+					JOptionPane.showMessageDialog(null, "예약자 " + name + "의 예약이 취소되었습니다.");
+					return true;
+				}
+			}
 		}
 		JOptionPane.showMessageDialog(null, "입력된 이름 " + name + "은 존재하지 않습니다.");
 		return false;

@@ -16,7 +16,7 @@ public class MainClass {
 		Box<String> box2 = new Box<>(); //뒤에 참조 자료형 생략되고 꺽쇠만 남았음
 		
 		box2.setItem("hi");
-		System.out.println(box2.getItem());//hi
+		System.out.println(box2.getItem());
 	}
 
 	

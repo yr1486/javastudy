@@ -55,9 +55,9 @@ public class MainClass {
 			url = new URL(apiURL); // 반드시 예외 처리가 필요한 코드라서 try안에 넣어야함
 			
 			
-			System.out.println("프로토콜 : " + url.getProtocol());
-			System.out.println("호스트 : " + url.getHost());
-			System.out.println("파라미터 : " + url.getQuery());
+			System.out.println("프로토콜 : " + url.getProtocol()); // 프로토콜 : https
+			System.out.println("호스트 : " + url.getHost()); //호스트 : search.naver.com
+			System.out.println("파라미터 : " + url.getQuery()); //파라미터 : query=삼성전자
 			
 			
 			
@@ -90,31 +90,33 @@ public class MainClass {
 			System.out.println("정상 응답 "+ HttpURLConnection.HTTP_OK); // 여기서 HttpURLConnection.HTTP_OK는 숫자 200을 뜻함 걍 아무뜻없음 200임!! 그케 공부하기 까먹지 말기
 			System.out.println("Not Found : " + HttpURLConnection.HTTP_NOT_FOUND);
 			System.out.println("Internal Error :" + HttpURLConnection.HTTP_INTERNAL_ERROR);
+			System.out.println();
 
 			//apiURL 접속 확인
 			int responseCode = con.getResponseCode(); 
 			if(responseCode == 200) { // 200대신 HttpURLConnection.HTTP_OK 써도됨
-				System.out.println(apiURL + " 접속 완료");
+				System.out.println(apiURL + " 접속 완료"); // https://search.naver.com 접속 완료
 			}
+			System.out.println();
 
 
 			// 요청 방식(요청 메소드)
 			String requestMethod = con.getRequestMethod();
-			System.out.println("요청 방식 : " + requestMethod);
+			System.out.println("요청 방식 : " + requestMethod); // 요청 방식 : GET
 
 			// 컨텐트 타입 ==> 웹상으로 주고받는 데이터의 타입
-			String contentType = con.getContentType();
-			System.out.println("컨텐트 타입 : " + contentType);
-			// 컨텐트 타입 : text/html; charset=UTF-8 // int나 double같은거임 외우기!!!!
+			String contentType = con.getContentType(); 
+			System.out.println("컨텐트 타입 : " + contentType); // 컨텐트 타입 : text/html; charset=UTF-8 // int나 double같은거임 외우기!!!!
 
 			// 요청 헤더
 			String userAgent = con.getRequestProperty("User-Agent");
-			System.out.println("User-Agent : " + userAgent);
+			System.out.println("User-Agent : " + userAgent); // User-Agent : Java/11.0.17
 
 			String referer = con.getRequestProperty("Referer");
-			System.out.println("Referer : " + referer); // 이전 주소가 나오는 코드
+			System.out.println("Referer : " + referer); //Referer : null
+			// 이전 주소가 나오는 코드
 			// null이 나오는거는 우리가 바로 네이버로 가서 이전 주소가 없음
-			// 쓰임. 만약 웹툰볼라고하는데 로그인하라고 나오면 로그인 이후에 그전페이지로 돌아가게 해줘야하니까 이런 코드를 입력함
+			// 쓰임. 만약 웹툰 볼라고하는데 로그인하라고 나오면 로그인 이후에 그전페이지로 돌아가게 해줘야하니까 이런 코드를 입력함
 
 			// 접속 종료
 			con.disconnect(); // 생략해도되지만 적자아.
@@ -340,7 +342,7 @@ public class MainClass {
 }
 
 	public static void main(String[] args) {
-		ex06();
+		ex02();
 		
 	}
 
