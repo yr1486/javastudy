@@ -48,7 +48,7 @@ public class XMLMainClass {
 			url = new URL(sbURL.toString());
 			con = (HttpURLConnection) url.openConnection();
 			
-			con.setRequestMethod("GET");
+			con.setRequestMethod("GET"); ///get=> 직접적으로  / post =>아이디, 비번같은
 			con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
 			
 			if(con.getResponseCode() == HttpURLConnection.HTTP_OK) {

@@ -59,7 +59,7 @@ public class MainClass {
 			System.out.println("호스트 : " + url.getHost()); //호스트 : search.naver.com
 			System.out.println("파라미터 : " + url.getQuery()); //파라미터 : query=삼성전자
 			
-			
+		
 			
 		}catch(MalformedURLException e) {
 			e.printStackTrace();
@@ -78,7 +78,7 @@ public class MainClass {
 		try {
 
 			url = new URL(apiURL); // MalformedURLException 처리가 필요하다
-			con = (HttpURLConnection)url.openConnection(); //IOException 처리가 필요하다
+			con = (HttpURLConnection)url.openConnection(); //IOExceptißon 처리가 필요하다
 
 			/*
 			 	HTTP 응답 코드 공부하기
@@ -342,7 +342,7 @@ public class MainClass {
 }
 
 	public static void main(String[] args) {
-		ex02();
+		ex05();
 		
 	}
 

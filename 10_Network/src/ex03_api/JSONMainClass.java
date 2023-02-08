@@ -33,10 +33,14 @@ public class JSONMainClass {
 			
 			String sidoName = "서울";
 			StringBuilder sbURL = new StringBuilder();
+			
 			sbURL.append(apiURL);
 			sbURL.append("?serviceKey=" + URLEncoder.encode(serviceKey, "UTF-8"));
 			sbURL.append("&returnType=json");
 			sbURL.append("&sidoName=" + URLEncoder.encode(sidoName, "UTF-8"));
+			System.out.println(sbURL);
+			System.out.println();
+			System.out.println();
 			
 			url = new URL(sbURL.toString()); // 스트링 빌더선언해서 더한 객체들을 다 담아줬음 
 			con = (HttpURLConnection) url.openConnection(); //  길을 뚫어줌 . 값을 거기서 받 오려면 . 메소드가 필요함. 둘의 메소드를 둘다 쓰기위해서 둘을 연결해줬음 
