@@ -44,10 +44,10 @@ public class ApiMain {
 		try {
 			
 			String sidoName = "1100";
-			//String guGun = "1125";
-			//String seachYear = "2021";
-		//	String numOfRows = "10";
-		///	String pageNo = "1";
+			String guGun = "1125";
+			String seachYear = "2021";
+			String numOfRows = "10";
+			String pageNo = "1";
 			
 			StringBuilder sbURL = new StringBuilder();
 			
@@ -55,18 +55,22 @@ public class ApiMain {
 			sbURL.append("?serviceKey=" + URLEncoder.encode(serviceKey, "UTF-8"));
 			sbURL.append("&returnType=json");
 			sbURL.append("&sidoName=" + URLEncoder.encode(sidoName, "UTF-8"));
-		//	sbURL.append("&guGun" + URLEncoder.encode(guGun, "UTF-8"));
-		//	sbURL.append("&seachYear" + URLEncoder.encode(seachYear, "UTF-8"));
-		//	sbURL.append("&numOfRows" + URLEncoder.encode(numOfRows, "UTF-8"));
-		//	sbURL.append("&pageNo" + URLEncoder.encode(pageNo, "UTF-8"));
+			sbURL.append("&guGun" + URLEncoder.encode(guGun, "UTF-8"));
+			sbURL.append("&seachYear" + URLEncoder.encode(seachYear, "UTF-8"));
+			sbURL.append("&numOfRows" + URLEncoder.encode(numOfRows, "UTF-8"));
+			sbURL.append("&pageNo" + URLEncoder.encode(pageNo, "UTF-8"));
 			
 			url = new URL(sbURL.toString());
 			con = (HttpURLConnection) url.openConnection();
 			
 			con.setRequestMethod("GET");
 			con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+		
 			
-			if(con.getResponseCode() == HttpURLConnection.HTTP_OK) { // 200과 같은 코드 
+			
+			
+			
+			if(con.getResponseCode() == HttpURLConnection.HTTP_OK) {
 				reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			} else {
 				reader = new BufferedReader(new InputStreamReader(con.getErrorStream()));
@@ -81,28 +85,12 @@ public class ApiMain {
 			reader.close(); 
 			con.disconnect();
 			
-			System.out.println(sb.toString());
-			
-			JSONObject obj = new JSONObject(sb.toString());
-			
-			JSONObject body = obj.getJSONObject("response").getJSONObject("body");
-		
-			JSONArray items = body.getJSONArray("items");
-			
-			for(int i = 0; i < items.length(); i++) {
-				JSONObject item = items.getJSONObject(i);
-				// System.out.println((i + 1) + "--" + item);
-				String stationName = item.getString("stationName");
-				String pm10Value = item.getString("pm10Value");
-				String o3Value = item.getString("o3Value");
-				System.out.println(stationName + " : 미세먼지 - " + pm10Value + ", 오존농도 - " + o3Value);
-			} 
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 	}
+	
 	
 	public static void main(String[] args) {
 		

@@ -67,28 +67,12 @@ public class JSONMainClass {
 			// 제이슨 명칭 : 원래는 프로퍼티와 밸류라고 함 근데, 맵구조로 만든거기때문에 맵이랑 똑같은 키랑 밸류로 많이씀!! obj.get("response") 오브젝트로부터 가지고오시오 리스펀스를. 근데 이거 안됨 ==> 캐스팅해야함 ==>(JSONObject)obj.get("response")
 			// 이거말고 두번째 방법 obj.getJSONObject !! 방법 2개있는거 돌아가서 다시 복습하기 // (캐스팅할필요없이 전용메소드로)
 			System.out.println(sb.toString());
+		}DROP USER HR CASCADE;
+
+CREATE USER HR IDENTIFIED BY 1111;
+
+GRANT DBA TO HR;
 			
-			JSONObject obj = new JSONObject(sb.toString());
-			
-			JSONObject body = obj.getJSONObject("response").getJSONObject("body"); // 리스펀 대괄호 값과 바디의 값을 출력하는.. 기호 같은..
-			
-			JSONArray items = body.getJSONArray("items");  // 배열만 담을 수 있으니까.
-			
-			for(int i = 0; i < items.length(); i++) {
-				JSONObject item = items.getJSONObject(i); // 여기서도 방법 2가지 겟을 쓰면 앞에다가 캐스팅하기, 아니면 타입자체를 겟타입으로
-				// System.out.println((i + 1) + "--" + item);
-				String stationName = item.getString("stationName");
-				String pm10Value = item.getString("pm10Value");
-				String o3Value = item.getString("o3Value");
-				System.out.println(stationName + " : 미세먼지 - " + pm10Value + ", 오존농도 - " + o3Value);
-			}
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
-	
 	
 	public static void ex02() {
 		
@@ -129,7 +113,7 @@ public class JSONMainClass {
 			}
 			
 			String line = null;
-			StringBuilder sb = new StringBuilder();
+			StringBuilder sb = new StringBuilder(); 
 			while((line = reader.readLine()) != null) {
 				sb.append(line);
 			}
