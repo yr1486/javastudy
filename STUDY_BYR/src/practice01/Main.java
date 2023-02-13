@@ -1,5 +1,5 @@
 
-package practice;
+package practice01;
 //ctrl+Shift+O = import
 
 import java.util.Scanner;
