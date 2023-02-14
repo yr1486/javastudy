@@ -21,7 +21,7 @@ public class ApiMain {
 		try {
 			String apiURL = "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1154551000";
 			
-			URL url = new URL(apiURL);
+			URL url = new URL(apiURL); // 웹접속 객체 
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			
 			con.setRequestMethod("GET");
@@ -31,14 +31,14 @@ public class ApiMain {
 			
 			if(con.getResponseCode() == 200) {
 				reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
-				
+																			// 읽어들이는데바이트임.
 			} else {
 				reader = new BufferedReader(new InputStreamReader(con.getErrorStream()));
 				
 			}
-			String line = null;
+			String line = null; 
 			StringBuilder sb = new StringBuilder();
-			while((line = reader.readLine()) != null) {
+			while((line = reader.readLine()) != null) {  // 문자를다읽으면NULL이라뜸. = 끝까지 읽어
 				sb.append(line);
 			}
 			reader.close();
@@ -46,32 +46,33 @@ public class ApiMain {
 			
 			
 			// 응답데이터(xml) 확인
-				//System.out.println(sb.toString());
+			// System.out.println(sb.toString());
 			
 			// 응답데이터(xml) 를 json 데이터로 변환하기
 			JSONObject obj = XML.toJSONObject(sb.toString());
-			//System.out.println(obj);
+			// System.out.println(obj);
 			
 			// pubDate 조회
 			String pubDate = obj.getJSONObject("rss")
-								.getJSONObject("channel")
-								.getString("pubDate");
+													.getJSONObject("channel")
+													.getString("pubDate");
 			System.out.println(pubDate);
+			
 			
 			// category 조회
 			String category = obj.getJSONObject("rss")
-								.getJSONObject("channel")
-								.getJSONObject("item")
-								.getString("category");
+													.getJSONObject("channel")
+													.getJSONObject("item")
+													.getString("category");
 			System.out.println(category);
 			
 			// data 속성에 저장된 날씨 배열 가져오기
 			JSONArray dataList = obj.getJSONObject("rss")
-								.getJSONObject("channel")
-								.getJSONObject("item")
-								.getJSONObject("description")
-								.getJSONObject("body")
-								.getJSONArray("data");
+													.getJSONObject("channel")
+													.getJSONObject("item")
+													.getJSONObject("description")
+													.getJSONObject("body")
+													.getJSONArray("data");
 			
 			// 순회
 			for(int i = 0; i < dataList.length(); i++) {
@@ -86,7 +87,7 @@ public class ApiMain {
 			// 결과 파일 만들기
 			BufferedWriter writer = new BufferedWriter(new FileWriter("weather.txt"));
 			writer.write(pubDate + "\n");
-			writer.write(category+ "\n");
+			writer.write(category + "\n");
 			writer.close();
 			// 경로지정안하면 프로젝트에 텍스트파일이 생김 
 			// 목록을 파일에 누적??? 이게 뭐지.. => 서술형 20점 나옴..
@@ -107,3 +108,4 @@ public class ApiMain {
 	}
 
 }
+
