@@ -99,7 +99,7 @@ public class ApiMain {
 			// dto 는 bean의 다른말,
 			// 데이터베이스에서 읽어드린 정보를 하나의 객체로.?
 			// 반대로도 가능함.
-			
+			//////////
 			
 		
 		} catch(Exception e) {
