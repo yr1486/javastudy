@@ -25,6 +25,34 @@ public class MainClass {
 	
 	public static void ex02() {
 		
+		// Oracle 접속 정보
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "GDJ61";
+		String password = "1111";
+		
+		// Oracle DataBase와 연결할 때 사용하는 Connection 인터페이스
+		Connection con = null;
+		
+		// DriverManager 클래스로부터 Connection 객체를 받아 온다.		
+		try {
+			
+			con = DriverManager.getConnection(url, user, password);
+			System.out.println("DB에 접속되었습니다.");
+			
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		// 사용이 끝난 Connection 객체는 반드시 닫아야 한다.
+		try {
+			
+			if(con != null) {
+				con.close();
+			}
+			
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
 		
 	}
 	
@@ -69,14 +97,47 @@ public class MainClass {
 		
 		
 	}
-	public static void main(String[] args) {
+	
+	public static Connection getConnection() {
 		
-		//ex01();
-		ex03();
+		Connection con = null;
+		
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			
+			Properties properties = new Properties();
+			properties.load(new BufferedReader(new FileReader("db.properties")));
+			con = DriverManager.getConnection(properties.getProperty("url"), properties.getProperty("user"), properties.getProperty("password"));
+					
+		} catch(Exception e) { // classnotfound, sql, io 익셉션 한번에 처리
+				e.printStackTrace();
+		
+	}
+	
+	return con;
+}
+	
+	
+	public static void main(String[] args) {
+		Connection con = getConnection();
+		System.out.println("DB에 접속되었습니다");
+
+		// ex01();
+		// ex03();
 		
 	}
 
 }
+	
+	// 커넥션 만들기
+	// select
+	// 커넥션 닫기
+	// 를 따로 만들기.
+	
+//커넥션 만들고 닫을떄마다 트라이캐치가 사용됨!!! ==> 트라이캐치에 필요한 예외처리 공부하기 만들고 닫고
+// 계속 반복해서 쓸수 없으니까 throws써서 처리하는거 공부해오기!! (메소드 내부에 트라이캐치 없애는 거임)
+
+// 내일 이클립스에서 쿼리문짜는거 배운댜..
 
 
 
