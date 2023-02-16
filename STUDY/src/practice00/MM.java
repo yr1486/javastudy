@@ -3,6 +3,7 @@ package practice00;
 public class MM {
 
 }
+// 올라 가나 보자..
 
 /*
 	--[문제1]--
