@@ -6,17 +6,19 @@ import lombok.Setter;
 import lombok.ToString;
 
 @ToString
-@Setter
 @Getter
+@Setter
 @AllArgsConstructor
 
 
 public class Car {
-	
-	private String carNo;
-	private String model;
-	
+
+
 	}
+	
+
+	
+	
 	
 
 

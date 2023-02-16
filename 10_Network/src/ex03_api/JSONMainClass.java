@@ -67,14 +67,14 @@ public class JSONMainClass {
 			// 제이슨 명칭 : 원래는 프로퍼티와 밸류라고 함 근데, 맵구조로 만든거기때문에 맵이랑 똑같은 키랑 밸류로 많이씀!! obj.get("response") 오브젝트로부터 가지고오시오 리스펀스를. 근데 이거 안됨 ==> 캐스팅해야함 ==>(JSONObject)obj.get("response")
 			// 이거말고 두번째 방법 obj.getJSONObject !! 방법 2개있는거 돌아가서 다시 복습하기 // (캐스팅할필요없이 전용메소드로)
 			System.out.println(sb.toString());
-		}DROP USER HR CASCADE;
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 
-CREATE USER HR IDENTIFIED BY 1111;
-
-GRANT DBA TO HR;
-			
-	
-	public static void ex02() {
+ static void ex02() {
 		
 		/*
 		한국환경공단_에어코리아_대기오염정보 : 시도별 실시간 측정정보 조회

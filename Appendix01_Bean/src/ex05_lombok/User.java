@@ -1,14 +1,11 @@
 package ex05_lombok;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 //singleton은 안됨!
-@Builder
+
 @ToString
 @NoArgsConstructor //아규먼트가 없는 ===> 디폴트 생성자
 @AllArgsConstructor 
@@ -21,9 +18,23 @@ public User(String id, String pw) {
 	this.pw = pw;
 */
 
-@Getter //@Setter치고 컨트롤 스페이스해서 임폴트 해줘야됨
-@Setter //@Setter치고 컨트롤 스페이스해서 임폴트 해줘야됨
+
+
+
+
 public class User {
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getPw() {
+		return pw;
+	}
+	public void setPw(String pw) {
+		this.pw = pw;
+	}
 	private String id;
 	private String pw;
 }

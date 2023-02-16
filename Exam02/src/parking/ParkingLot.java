@@ -43,13 +43,15 @@ public class ParkingLot {
 	//System.out.println("차량번호와 모델명을 순서대로 입력하세요");
 	//Car car = new Car(sc.next(), sc.next());
 	
-	public void deleteCar() {
+/* public void deleteCar() {
 		if(idx == 0) { 
 			System.out.print("등록된 차량이 없습니다");
 			return;
 		}
 		System.out.print("제거할 차량번호를 입력하세요 >>> ");
 		String carNo = sc.next();
+		
+		
 		
 		for(int i = 0; i < idx; i++) {
 			Car car = cars[i]; // 자동차 한대 씩 꺼내는거임 ==> 이부분 못함
@@ -59,7 +61,7 @@ public class ParkingLot {
 				cars[--idx] = null;
 				System.out.println("차량번호" + carNo + "인 차량이 삭제되었습니다");
 				
-				/* 방법2
+				방법2
 				 	마지막 차량을 옮겨오기
 					제거할 차량의 '위치' : i
 					마지막 차량의 위치 : idx-1 //idx자리는 새로운 차량이 들어올거라 비어잇어요
@@ -67,14 +69,16 @@ public class ParkingLot {
 					첫번째차량 = 마지막차량
 					cars[--idx] = null; //인덱스값 하나 줄어준 다음에 그자리에 널값을 주는것. ==> 차량이 줄어들었으니까
 					return; // break;도 가능
-				*/
+				
 			}
 		}
 		// ==> 삭제할 차량이 없을때 이곳으로 올 수 있음. 위에서 똑같은 차량을 못만나서 for문이 종료되거든.
 		System.out.println("대상 차량이 존재하지 않습니다"); // else가 오면 안됨 ==> 3번출력하게되는거임, 차량이 100개면 100개 출력됨 //이미 다 비교를 맞췄어 리턴안만났고 for문이 걍 리턴을 못만나서 끝나는 거임
 
 	}
-
+*/
+	
+	
 	public void printAllCars() {
 		if(idx == 0) {
 			System.out.print("등록된 차량이 없습니다");
@@ -106,9 +110,9 @@ public class ParkingLot {
 			case "1": // addCar 줄것도 받아올것도 없어 (); 니까
 				addCar(); // 호출            ===> 메소드는 만들었으면 호출해서 무조건 써야함!!
 				break;
-			case "2":
-				deleteCar();
-				break;
+			//case "2":
+			//	deleteCar();
+			//	break;
 			case "3":
 				printAllCars();
 				break;

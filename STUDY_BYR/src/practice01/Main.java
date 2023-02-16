@@ -12,6 +12,8 @@ public class Main {
 		Scanner s = new Scanner(System.in);
 		int A = s.nextInt();
 		
+		
+		
 	}
 
 
