@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.Properties;
 
-		public class CreateTableMainClass {
+		public class MemberTableMainClass {
 
 			public static void main(String[] args) {
 
