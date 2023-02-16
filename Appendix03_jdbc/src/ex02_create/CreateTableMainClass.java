@@ -19,7 +19,7 @@ import java.util.Properties;
 				
 				try {
 					// 오라클 드라이버 로
-					Class.forName("oracle.jdbc.OracleDriver"); // 이름으로 클래스 호출하기, 왠쪽 패키지에서 라이브러리 열어서 경로로도 볼수있어!! 외우면좋음 . 
+					Class.forName("oracle.jdbc.OracleDriver"); // 이름으로 클래스 호출하기, 왠쪽 패키지에서 라이브러리 열어서 경로로도 볼수있어!! 외우면좋음.
 					//얘의 예외는? 클래스낫파운드. 빌드패스 안잡거나, 오타나거나. 
 					
 					
@@ -67,34 +67,38 @@ import java.util.Properties;
 				
 			StringBuilder sb = new StringBuilder();
 			sb.append("CREATE TABLE MEMBER_TBL (");
-			sb.append("MEMBER_NO NUMBER NOT NULL CONSTRAINT PK_MEMBER PRIMARY KEY");
+			sb.append("MEMBER_NO NUMBER NOT NULL");
 			sb.append(", ID VARCHAR2(30 BYTE) NOT NULL UNIQUE");
 			sb.append(", NAME VARCHAR2(30 BYTE) NOT NULL");
 			sb.append(", ADDRESS VARCHAR2(30 BYTE)");
-			sb.append(", JOIN_DATE DATE NOT NULL)");
+			sb.append(", JOIN_DATE DATE NOT NULL");
+			sb.append(", CONSTRAINT PK_MEMBER PRIMARY KEY(MEMBER_NO))");
 
 			String sql = sb.toString();
 			PreparedStatement ps = null;
 			
+			try {
 				
+				// PreparedStatement 객체 생성
+				ps = con.prepareStatement(sql);
 				
+				// 쿼리문 실행하기
+				ps.execute();
+				System.out.println("쿼리문이 실행되었습니다.");
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+			/* 3. 사용한 자원 반납하기 */
+			
+			try {
 				
+				if(ps != null) ps.close();
+				if(con != null) con.close();
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-		
-		
-
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
 
 
 			}
