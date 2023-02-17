@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import dto.ContactDTO;
@@ -128,6 +130,188 @@ public class ContactDAO {
 		// 여기까지 insert담당하는 DAO 완성
 	
 	}
+	
+	
+	// CRUD 메소드 - 2 (연락처 삭제하기)
+	// 1. 반환값 : 0 실패 , 또는 1 성공
+	// 2. 매개변수 : int contact_no 변수에는 삭제할 연락처의 고유 번호가 저장되어 있다.
+	public int deleteContact(int contact_no) {
+		
+		try {
+			
+			con = getConnection();
+			sql = "DELETE FROM COTACT_TBL WHERE CONTACT_NO = ?";
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, contact_no);
+			res = ps.executeUpdate(); // ps 결과 받아오기
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		
+		return res;
+		
+		// 삭제 DAO 완성..
+	}
+
+	// CRUD 메소드 - 3 (이름을 이용한 연락처 조회하기)
+	// 1. 반환값 : List<ContactDTO>
+	// 2. 매개변수 : String name 변수에는 조회할 연락처의 이름이 저장되어 있다
+	public List<ContactDTO> selectContactsByName(String name) { // 여러개 반환할거임
+		
+		List<ContactDTO> contactList = new ArrayList<ContactDTO>();
+		
+		try {
+			
+			con = getConnection();
+			sql =  "SELECT CONTACT_NO, NAME, TEL, EMAIL, ADDRESS";
+			sql += "  FROM CONTACT_TBL";
+			sql += " WHERE NAME = ?";
+			
+			ps = con.prepareStatement(sql);
+			
+			ps.setString(1, name);
+			// 실행하자
+			rs = ps.executeQuery(); // rs는 한번에 한줄밖에 처리못함 여러개하면 반복문 이용해야함
+			
+			while(rs.next()) { // 조회결과가 있으면
+				// rs는 행단위로 처리한다.
+				ContactDTO contact = new ContactDTO();
+				contact.setContact_no(rs.getInt("CONTACT_NO"));
+				contact.setName(rs.getString("name"));
+				contact.setTel(rs.getString("TEL"));
+				contact.setEmail(rs.getString("EMAIL"));
+				contact.setAddress(rs.getString("ADDRESS"));
+				// 칼럼에 명을 직접 입력해서 가져오는 방법.
+				// 위에서 한줄씩 바꿔서
+				contactList.add(contact); // 어레이리스트에 저장.
+				
+				
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return contactList; 
+	}
+	
+	// CRUD 메소드 - 4 (연락처 수정하기)
+	// 1. 반환값 : 0(실패), 또는 1(성공)
+	// 2. 매개변수 : ContactDTO contact 객체에는 연락처정보(name,tel,email,address) 모두 저장되어 있다.
+	
+	public int updateContact(ContactDTO contact) {
+		
+		try {
+			
+			con = getConnection();
+			sql =  "UPDATE CONTACT_TBL";
+			sql += "   SET NAME = ?, TEL = ?, EMAIL = ?, ADDRESS = ?";
+			sql += " WHERE CONTACT_NO = ?";
+				// 웨얼에 띄어쓰기 꼭 해주기
+			ps = con.prepareStatement(sql);
+			ps.setString(1, contact.getName()); // 컨텍에 들어가있ㄴ는거 이해하기
+			ps.setString(2, contact.getTel());
+			ps.setString(3, contact.getEmail());
+			ps.setString(4, contact.getAddress());
+			ps.setInt(5, contact.getContact_no());
+			
+			res = ps.executeUpdate();
+			
+					
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return res;
+	}
+	
+	
+	// CRUD 메소드 - 5 (연락처 No를 이용한 연락처 조회하기)
+	// 1. 반환값 	: ContactDTO
+	// 2. 매개변수 : int contact_no 변수에는 조회할 연락처의 고유 번호가 저장되어 있다
+	public ContactDTO selectContactByNo(int contact_no) {
+		
+		ContactDTO contact = null; // new가 아닌 null임을 알아야함
+		
+		try {
+			con = getConnection();
+			sql =  "SELECT CONTACT_NO, NAME, TEL, EMAIL, ADDRESS";
+			sql += "  FROM CONTACT_TBL";
+			sql += " WHERE CONTACT_NO = ?";
+			ps = con.prepareStatement(sql);
+			
+			ps.setInt(1, contact_no);
+			rs = ps.executeQuery();
+			
+			if(rs.next()) {// 결과가 1개니까 while이 아닌 if임
+				contact = new ContactDTO();
+				contact.setContact_no(contact_no);
+				contact.setName(rs.getString(2));
+				contact.setTel(rs.getString(3));
+				contact.setEmail(rs.getString(4));
+				contact.setAddress(rs.getString(5));
+				// 칼럼에 명을 숫자로 입력해서 가져오는 방법.
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		
+		return contact; // 처음만들때와 동시에 같이 코드 만들어 놓기.
+		
+		
+	}
+	
+	// CRUD 메소드 - 6 (전체 연락처 연락처 조회하기)
+	// 1. 반환값 : List<ContactDTO>
+	// 2. 매개변수 : 없음 
+	// 위에 메소드 3번에서 조금만 번형하면 전체 연락처조회를 만들 수 있다.
+	public List<ContactDTO> selectsAllContacts() {
+		
+		List<ContactDTO> contactList = new ArrayList<ContactDTO>();
+		
+		try {
+			
+			con = getConnection();
+			sql =  "SELECT CONTACT_NO, NAME, TEL, EMAIL, ADDRESS";
+			sql += "  FROM CONTACT_TBL";
+			sql += " ORDER BY CONTACT_NO DESC";
+			
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery(); // rs는 한번에 한줄밖에 처리못함 여러개하면 반복문 이용해야함
+			
+			while(rs.next()) { // 조회결과가 있으면
+				// rs는 행단위로 처리한다.
+				ContactDTO contact = new ContactDTO();
+				contact.setContact_no(rs.getInt("CONTACT_NO"));
+				contact.setName(rs.getString("name"));
+				contact.setTel(rs.getString("TEL"));
+				contact.setEmail(rs.getString("EMAIL"));
+				contact.setAddress(rs.getString("ADDRESS"));
+				// 칼럼에 명을 직접 입력해서 가져오는 방법.
+				// 위에서 한줄씩 바꿔서
+				contactList.add(contact); // 어레이리스트에 저장.
+				
+				
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return contactList; 
+	}
+	
+	
+	
+	
+	
 	
 	
 }

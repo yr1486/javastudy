@@ -1,5 +1,6 @@
 package service;
 
+import java.util.List;
 import java.util.Scanner;
 
 import dao.ContactDAO;
@@ -45,21 +46,110 @@ public class ContactServiceImpl implements ContactService {
 		
 		
 	}
+
+	@Override
+	public void removeContact() {
+		// TODO Auto-generated method stub
+		
+		System.out.println("======연락처 삭제하기========");
+		
+		System.out.print("삭제할 연락처 이름 >>> ");
+		String name = sc.next();
+		
+		List<ContactDTO> contactList = dao.selectContactsByName(name);
+		System.out.println("<<< 조회된 연락처 목록 >>>");
+		for(ContactDTO contact : contactList) { // 목록 보여주기.
+			System.out.println(contact);
+		}
+		
+		System.out.print("삭제할 연락처 No >>> ");
+		int contact_no =sc.nextInt();
+		int removeResult = dao.deleteContact(contact_no);
+		
+		System.out.println(removeResult + "개의 연락처가 삭제되었습니다.");
+	
+	
+	
+	
+	}
+
+	@Override
+	public void modifyContact() {
+		System.out.println("===========연락처 수정하기==========");
+		System.out.print(" 수정할 연락처 이름 >>> ");
+		String name = sc.next();
+		
+		List<ContactDTO> contactList = dao.selectContactsByName(name);
+		System.out.println("<<< 조회된 연락처 목록 >>>");
+		for(ContactDTO contact : contactList) { // 목록 보여주기.
+			System.out.println(contact);
+	}
+		System.out.print("수정할 연락처 No >>> ");
+		int contact_no = sc.nextInt();
+		ContactDTO contact = dao.selectContactByNo(contact_no); 
+		// contact_no전달 // 수정하기 전의 내용을 저장한 contact 객체
+		// 여기에는 5개 필드값이 모두 차 있다.
+		
+		// 이제 사용자가 수정한 항목만 바꿔주는 거임!! case 1,2~ 해서 선택한 값만 수정.
+		System.out.print("수정할 항목 선택(1.이름 2.전화 3.이메일 4.주소) >>>");
+		String choice = sc.next();
+		switch(choice) {
+		case "1" :
+			System.out.print("수정할 이름 입력 >>> ");
+			contact.setName(sc.next());
+			break;
+		case "2" :
+			System.out.print("수정할 전화 입력 >>> ");
+			contact.setTel(sc.next());
+			break;
+		case "3" :
+			System.out.print("수정할 이메일 입력 >>> ");
+			contact.setEmail(sc.next());
+			break;
+		case "4" :
+			System.out.print("수정할 주소 입력 >>>");
+			contact.setAddress(sc.next());
+			break;
+		default:
+			System.out.print("잘못된 입력입니다. 수정을 취소합니다");
+			return; // 완전히 종료
+		}
+		
+		int modifyResult = dao.updateContact(contact);
+		
+		System.out.println(modifyResult + "개의 연락처가 수정되었습니다.");
+
+
 }
 
+	@Override
+	public void findContactsByName() {
+		
+		System.out.println("======연락처 조회하기======");
+		System.out.println("조회할 연락처 이름 >>> ");
+		String name = sc.next();
+		
+		List<ContactDTO> contactList = dao.selectContactsByName(name);
+		for(ContactDTO contact : contactList) { // 목록 보여주기.
+			System.out.println(contact);
+		
+		}
 
+	}
+	
+	@Override
+	public void findAllContacts() {
+		System.out.println("=======전체 연락처 목록======");
+		for(ContactDTO contact : dao.selectsAllContacts()) {
+			System.out.println(contact);
+			
+			
+		}
+		
+		
+	}
 
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 

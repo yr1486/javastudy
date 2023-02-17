@@ -28,6 +28,18 @@ public class ContactController {
 			case "1" :
 				service.addContact();
 				break;
+			case "2" :
+				service.removeContact();
+				break;
+			case "3" :
+				service.modifyContact();
+				break;
+			case "4" :
+				service.findContactsByName();
+				break;
+			case "5" :
+				service.findAllContacts();
+				break;
 			case "0" :
 				System.out.println("연락처 관리 프로그램이 종료되었습니다.");
 				return; // 완전히 끝나는거
