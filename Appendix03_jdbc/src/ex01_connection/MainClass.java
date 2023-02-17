@@ -122,7 +122,7 @@ public class MainClass {
 		Connection con = getConnection();
 		System.out.println("DB에 접속되었습니다");
 
-		// ex01();
+		 ex01();
 		// ex03();
 		
 	}
