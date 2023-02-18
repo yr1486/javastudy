@@ -1,4 +1,4 @@
-package re_exam;
+package practice;
 
 import java.util.Arrays; // import : 불러들이다
 
