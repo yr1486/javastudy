@@ -1,4 +1,4 @@
-package practice_for;
+package practice_for_while;
 
 import java.util.Scanner;
 
@@ -195,12 +195,12 @@ https://www.acmicpc.net/problem/2739
 		
 	}
 	
-	public static void ex10() {	
+	public static void ex10() {	// 별찍기 
 		Scanner s = new Scanner(System.in);
 		int n = s.nextInt();
 		
 		for(int i=0; i<n; i++) {
-			for(int ss=0; ss<n-i; ss++) { // +1씩 증가하는 친구가 i니까 !!!!! 
+			for(int ss=1; ss<n-i; ss++) { // +1씩 증가하는 친구가 i니까 !!!!! i활용 
 				System.out.print(" ");
 			}
 			for(int j=0; j<=i; j++) {
@@ -275,7 +275,7 @@ https://www.acmicpc.net/problem/2739
 	}
 
 	public static void main(String[] args) {
-		ex05();
+		ex10();
 	}
 
 }

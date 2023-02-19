@@ -18,9 +18,8 @@ public class MainClass {
 					.pw("654321")
 					.build();
 		System.out.println(user2);
-					
+
 	}
 
 }
-
 
