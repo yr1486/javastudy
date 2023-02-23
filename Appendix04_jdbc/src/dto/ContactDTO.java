@@ -19,6 +19,8 @@ public class ContactDTO {
 		this.email = email;
 		this.address = address;
 	}
+	
+
 
 	public int getContact_no() {
 		return contact_no;

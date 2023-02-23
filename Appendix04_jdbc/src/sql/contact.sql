@@ -17,7 +17,6 @@ CREATE SEQUENCE CONTACT_SEQ NOCACHE;
 -- 맨위 타입 오라클11 / 네임 GDJ61 맞추고 우클릭 execute all 누르면 실행되고, 에러창 2개 뜸 왜냐 본문에 드랍이 2개 있으니까!
 
 SELECT CONTACT_NO, NAME, TEL, EMAIL, ADDRESS
-  FROM CONTACT_TBL;
-  
+  FROM CONTACT_TBL;  
 
  
