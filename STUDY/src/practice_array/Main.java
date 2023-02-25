@@ -20,6 +20,8 @@ public class Main {
 				// i가 인덱스니까 +1 해줘야 1,3,5 로 똑바로 나와.
 			}
 			System.out.println();
+			System.out.println();
+			System.out.println();
 		}
 	}
 }
