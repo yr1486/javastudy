@@ -66,6 +66,24 @@ public class MainClass {
 		Scanner s = new Scanner(System.in);
 		int user = s.nextInt();
 		
+		// for문 1부터 입력받은 숫자까지 하나하나씩 검사.
+		// for문 안에서 짝수인지 아닌지 검사 if로
+		// 짝수의 갯수를 담아줄 변수가 있어야해. 
+		// +1 	해줘야해. 
+		//	count ++;
+		
+		for(int i=0; i<user; i++) {
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 			if(user % 2 == 0) {
 				int result = user / 2;
 				System.out.println("짝수의 갯수 : " + result);
@@ -122,7 +140,6 @@ https://www.acmicpc.net/problem/2739
 			}
 			System.out.println();
 			
-				
 		}
 	}
 	

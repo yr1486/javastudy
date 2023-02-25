@@ -1,39 +1,25 @@
 package practice_array;
 
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-/*
+
 		Scanner sc = new Scanner(System.in);
+		int size = sc.nextInt();
 		
-		int arrEng[] = new int[10];
-		boolean arrKor[] = new boolean[10];
 		
-		for(int i=0; i<10; i++) {
-			arrEng[i] = sc.nextInt();
+		for(int i=0; i<size; i++) {
+			for(int ss=0; ss<(size-i); ss++) {
+				System.out.print("-");
+			}
+			for(int j=0; j<(i*2)+1; j++) {
+				System.out.print("*");
+				// 별이 1,3,5,7... 규칙이 있어
+				// i가 인덱스니까 +1 해줘야 1,3,5 로 똑바로 나와.
+			}
+			System.out.println();
 		}
-		
-
-		for(int i=0; i<10; i++) {
-			int temp = sc.nextInt();
-			// 시험에 응시한 학생 배열에 대입하기 위해 값을 변수에 임시 저장
-			if(temp == 1) {
-				arrKor[temp-1] = true;
-			}
-			
-			else {
-				arrKor[temp-1] = false;
-			}
-		}
-		
-		for(int i=0; i<10; i++) {
-			if(arrKor[i] == true && arrEng[i] > 80) {
-				System.out.print(i+1 + "\n");
-				
-			}
-		} */
-		
-	} 
-
+	}
 }
